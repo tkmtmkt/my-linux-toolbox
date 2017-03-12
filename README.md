@@ -4,6 +4,7 @@
 構成
 ----
 
+```
 toolbox/
 ├─centos5/
 │  ├─toolbox/            ←インストール先
@@ -27,11 +28,21 @@ toolbox/
 │          │  └─build-m4.sh         ←個別のビルドスクリプト
 │          └─src/                    ←tarballダウンロード先
 └─docker-compose.yml
+```
 
 
 ビルド＆インストール
 --------------------
 
-docker-compose run --rm centos5 /opt/toolbox/recipe/build.sh
-docker-compose run --rm centos6 /opt/toolbox/recipe/build.sh
-docker-compose run --rm centos7 /opt/toolbox/recipe/build.sh
+```sh
+$ build.sh
+```
+
+or
+
+```sh
+$ docker-compose run --rm centos5 /opt/toolbox/recipe/build.sh
+$ docker-compose run --rm centos6 /opt/toolbox/recipe/build.sh
+$ docker-compose run --rm centos7 /opt/toolbox/recipe/build.sh
+```
+
