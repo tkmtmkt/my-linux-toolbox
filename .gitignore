@@ -1,2 +1,4 @@
-opt/toolbox/*
-!opt/toolbox/recipe/
+centos5/opt/toolbox/
+centos6/opt/toolbox/
+centos7/opt/toolbox/
+common/opt/toolbox/src/

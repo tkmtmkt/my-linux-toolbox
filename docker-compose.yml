@@ -1,6 +1,23 @@
 version: '2'
 services:
-  toolbox:
-    build: ./toolbox
+  centos5:
+    build: ./centos5
+    tty: true
     volumes:
-      - './opt/toolbox:/opt/toolbox:rw'
+      - './centos5/opt/toolbox/:/opt/toolbox/:rw'
+      - './common/opt/toolbox/recipe/:/opt/toolbox/recipe/:rw'
+      - './common/opt/toolbox/src/:/opt/toolbox/src/:rw'
+  centos6:
+    build: ./centos6
+    tty: true
+    volumes:
+      - './centos6/opt/toolbox/:/opt/toolbox/:rw'
+      - './common/opt/toolbox/recipe/:/opt/toolbox/recipe/:rw'
+      - './common/opt/toolbox/src/:/opt/toolbox/src/:rw'
+  centos7:
+    build: ./centos7
+    tty: true
+    volumes:
+      - './centos7/opt/toolbox/:/opt/toolbox/:rw'
+      - './common/opt/toolbox/recipe/:/opt/toolbox/recipe/:rw'
+      - './common/opt/toolbox/src/:/opt/toolbox/src/:rw'
