@@ -14,6 +14,7 @@ pushd $TARGET
             --disable-selinux \
             --enable-python3interp
 make && make install
+ln -sf vim $PREFIX/bin/vi
 popd
 
 popd
