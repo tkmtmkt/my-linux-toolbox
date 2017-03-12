@@ -2,6 +2,5 @@ version: '2'
 services:
   toolbox:
     build: ./toolbox
-    tty: true
     volumes:
-      - "./opt/toolbox:/opt/toolbox:rw"
+      - './opt/toolbox:/opt/toolbox:rw'
