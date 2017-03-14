@@ -16,6 +16,7 @@ $SCRIPT_DIR/build-gettext.sh
 $SCRIPT_DIR/build-perl.sh
 $SCRIPT_DIR/build-openssl.sh
 $SCRIPT_DIR/build-git.sh
+$SCRIPT_DIR/build-tig.sh
 
 $SCRIPT_DIR/build-libevent.sh
 $SCRIPT_DIR/build-tmux.sh
