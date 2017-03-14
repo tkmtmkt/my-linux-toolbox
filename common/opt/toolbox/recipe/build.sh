@@ -18,6 +18,8 @@ $SCRIPT_DIR/build-openssl.sh
 $SCRIPT_DIR/build-git.sh
 $SCRIPT_DIR/build-tig.sh
 
+$SCRIPT_DIR/build-global.sh
+
 $SCRIPT_DIR/build-libevent.sh
 $SCRIPT_DIR/build-tmux.sh
 
