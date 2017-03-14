@@ -11,9 +11,10 @@ DOWNLOAD_URL=https://github.com/git/git/archive/v2.12.0.tar.gz
 [[ ! -e $TARGET ]] && tar zxf $ARCHIVE
 pushd $TARGET
 make configure
-./configure --prefix=$PREFIX
-make all doc
-make install install-doc install-html
+./configure --prefix=$PREFIX \
+            --with-perl=$PREFIX/bin/perl
+make all
+make install
 cp -rp ./contrib $PREFIX/share/git-core/
 popd
 
