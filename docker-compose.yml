@@ -7,7 +7,7 @@ services:
     volumes:
       - './centos5/opt/toolbox/:/opt/toolbox/:rw'
       - './common/opt/toolbox/recipe/:/opt/toolbox/recipe/:rw'
-      - './common/opt/toolbox/src/:/opt/toolbox/src/:rw'
+      - './common/opt/toolbox/arch/:/opt/toolbox/arch/:rw'
   centos6:
     build: ./centos6
     hostname: centos6
@@ -15,7 +15,7 @@ services:
     volumes:
       - './centos6/opt/toolbox/:/opt/toolbox/:rw'
       - './common/opt/toolbox/recipe/:/opt/toolbox/recipe/:rw'
-      - './common/opt/toolbox/src/:/opt/toolbox/src/:rw'
+      - './common/opt/toolbox/arch/:/opt/toolbox/arch/:rw'
   centos7:
     build: ./centos7
     hostname: centos7
@@ -23,4 +23,4 @@ services:
     volumes:
       - './centos7/opt/toolbox/:/opt/toolbox/:rw'
       - './common/opt/toolbox/recipe/:/opt/toolbox/recipe/:rw'
-      - './common/opt/toolbox/src/:/opt/toolbox/src/:rw'
+      - './common/opt/toolbox/arch/:/opt/toolbox/arch/:rw'

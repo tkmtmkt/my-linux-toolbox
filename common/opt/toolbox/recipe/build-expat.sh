@@ -5,7 +5,7 @@ source $SCRIPT_DIR/build-common.sh
 pushd $BUILD_DIR
 
 TARGET=expat-2.2.0
-ARCHIVE=$SRC_DIR/$TARGET.tar.bz2
+ARCHIVE=$ARCH_DIR/$TARGET.tar.bz2
 DOWNLOAD_URL=https://sourceforge.net/projects/expat/files/expat/2.2.0/$TARGET.tar.bz2
 [[ ! -e $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
 [[ ! -e $TARGET ]] && tar jxf $ARCHIVE
