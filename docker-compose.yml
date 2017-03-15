@@ -2,6 +2,7 @@ version: '2'
 services:
   centos5:
     build: ./centos5
+    hostname: centos5
     tty: true
     volumes:
       - './centos5/opt/toolbox/:/opt/toolbox/:rw'
@@ -9,6 +10,7 @@ services:
       - './common/opt/toolbox/src/:/opt/toolbox/src/:rw'
   centos6:
     build: ./centos6
+    hostname: centos6
     tty: true
     volumes:
       - './centos6/opt/toolbox/:/opt/toolbox/:rw'
@@ -16,6 +18,7 @@ services:
       - './common/opt/toolbox/src/:/opt/toolbox/src/:rw'
   centos7:
     build: ./centos7
+    hostname: centos7
     tty: true
     volumes:
       - './centos7/opt/toolbox/:/opt/toolbox/:rw'
