@@ -24,4 +24,4 @@ $SCRIPT_DIR/build-tig.sh
 
 $SCRIPT_DIR/build-highway.sh
 $SCRIPT_DIR/build-p7zip.sh
-#$SCRIPT_DIR/build-nkf.sh
+$SCRIPT_DIR/build-nkf.sh
