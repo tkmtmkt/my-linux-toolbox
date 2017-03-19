@@ -4,6 +4,7 @@ export CFLAGS="-I$PREFIX/include"
 export LDFLAGS="-L$PREFIX/lib"
 export LD_LIBRARY_PATH=$PREFIX/lib
 export PATH=$PREFIX/bin:$PATH
+export MANPATH=$PREFIX/man:
 
 export ARCH_DIR=$PREFIX/arch
 [[ ! -e $ARCH_DIR ]] && mkdir -p $ARCH_DIR
