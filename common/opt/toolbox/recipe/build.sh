@@ -18,6 +18,14 @@ $SCRIPT_DIR/build-openssl.sh
 $SCRIPT_DIR/build-git.sh
 $SCRIPT_DIR/build-tig.sh
 
+# GnuPG
+$SCRIPT_DIR/build-libgpg-error.sh
+$SCRIPT_DIR/build-libgcrypt.sh
+$SCRIPT_DIR/build-libassuan.sh
+$SCRIPT_DIR/build-libksba.sh
+$SCRIPT_DIR/build-pth.sh
+$SCRIPT_DIR/build-gnupg.sh
+
 #$SCRIPT_DIR/build-libevent.sh
 #$SCRIPT_DIR/build-tmux.sh
 
