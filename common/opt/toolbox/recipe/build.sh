@@ -6,6 +6,11 @@ $SCRIPT_DIR/build-perl.sh
 $SCRIPT_DIR/build-m4.sh
 $SCRIPT_DIR/build-autoconf.sh
 $SCRIPT_DIR/build-automake.sh
+
+$SCRIPT_DIR/build-zlib.sh
+$SCRIPT_DIR/build-bzip.sh
+$SCRIPT_DIR/build-xz.sh
+
 $SCRIPT_DIR/build-tar.sh
 
 $SCRIPT_DIR/build-ncurses.sh
@@ -13,7 +18,6 @@ $SCRIPT_DIR/build-vim.sh
 
 $SCRIPT_DIR/build-gettext.sh
 $SCRIPT_DIR/build-expat.sh
-$SCRIPT_DIR/build-zlib.sh
 $SCRIPT_DIR/build-openssl.sh
 $SCRIPT_DIR/build-git.sh
 $SCRIPT_DIR/build-tig.sh
