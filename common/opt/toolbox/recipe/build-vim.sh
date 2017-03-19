@@ -7,7 +7,7 @@ pushd $BUILD_DIR
 TARGET=vim-8.0.0433
 ARCHIVE=$ARCH_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=https://github.com/vim/vim/archive/v8.0.0433.tar.gz
-[[ ! -e $ARCHIVE ]] && wget -O $ARCHIVE $DOWNLOAD_URL
+[[ ! -e $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
 [[ ! -e $TARGET ]] && tar zxf $ARCHIVE
 pushd $TARGET
 ./configure --prefix=$PREFIX \
