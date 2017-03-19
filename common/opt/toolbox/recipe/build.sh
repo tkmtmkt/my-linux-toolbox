@@ -34,8 +34,8 @@ $SCRIPT_DIR/build-pth.sh
 $SCRIPT_DIR/build-gnupg.sh
 
 # tmux
-#$SCRIPT_DIR/build-libevent.sh
-#$SCRIPT_DIR/build-tmux.sh
+$SCRIPT_DIR/build-libevent.sh
+$SCRIPT_DIR/build-tmux.sh
 
 # other utils
 $SCRIPT_DIR/build-highway.sh

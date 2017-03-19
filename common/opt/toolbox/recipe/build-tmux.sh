@@ -12,9 +12,6 @@ DOWNLOAD_URL=https://github.com/tmux/tmux/archive/2.3.tar.gz
 pushd $TARGET
 ./autogen.sh
 ./configure --prefix=$PREFIX \
-            --enable-static \
-            LIBEVENT_CFLAGS="-I$PREFIX/include" \
-            LIBEVENT_LIBS="-L$PREFIX/lib" \
             LIBNCURSES_CFLAGS="-I$PREFIX/include/ncursesw" \
             LIBNCURSES_LIBS="-L$PREFIX/lib"
 make && make install
