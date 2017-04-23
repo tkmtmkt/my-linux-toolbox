@@ -22,6 +22,7 @@ $SCRIPT_DIR/build-vim.sh
 $SCRIPT_DIR/build-gettext.sh
 $SCRIPT_DIR/build-expat.sh
 $SCRIPT_DIR/build-openssl.sh
+$SCRIPT_DIR/build-curl.sh
 $SCRIPT_DIR/build-git.sh
 $SCRIPT_DIR/build-tig.sh
 
