@@ -10,7 +10,10 @@ DOWNLOAD_URL=https://www.gnupg.org/ftp/gcrypt/libksba/$TARGET.tar.bz2
 [[ ! -e $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
 [[ ! -e $TARGET ]] && tar jxf $ARCHIVE
 pushd $TARGET
-./configure --prefix=$PREFIX
+./configure --prefix=$PREFIX \
+            --enable-static \
+            --disable-shared \
+            --with-libgpg-error-prefix=$PREFIX
 make && make install
 popd
 
