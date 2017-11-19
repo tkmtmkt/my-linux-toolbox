@@ -10,7 +10,10 @@ DOWNLOAD_URL=https://github.com/libevent/libevent/releases/download/release-2.1.
 [[ ! -e $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
 [[ ! -e $TARGET ]] && tar zxf $ARCHIVE
 pushd $TARGET
-./configure --prefix=$PREFIX
+./configure --prefix=$PREFIX \
+            --enable-static \
+            --disable-shared \
+            --disable-openssl
 make && make install
 popd
 

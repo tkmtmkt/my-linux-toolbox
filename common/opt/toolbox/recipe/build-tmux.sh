@@ -4,16 +4,15 @@ source $SCRIPT_DIR/build-common.sh
 
 pushd $BUILD_DIR
 
-TARGET=tmux-2.3
+TARGET=tmux-2.6
 ARCHIVE=$ARCH_DIR/$TARGET.tar.gz
-DOWNLOAD_URL=https://github.com/tmux/tmux/archive/2.3.tar.gz
+DOWNLOAD_URL=https://github.com/tmux/tmux/archive/2.6.tar.gz
 [[ ! -e $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
 [[ ! -e $TARGET ]] && tar zxf $ARCHIVE
 pushd $TARGET
 ./autogen.sh
-./configure --prefix=$PREFIX \
-            LIBNCURSES_CFLAGS="-I$PREFIX/include/ncursesw" \
-            LIBNCURSES_LIBS="-L$PREFIX/lib"
+./configure --prefix=$PREFIX
+make clean
 make && make install
 popd
 
