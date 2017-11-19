@@ -4,7 +4,7 @@ source $SCRIPT_DIR/build-common.sh
 
 pushd $BUILD_DIR
 
-TARGET=perl-5.24.1
+TARGET=perl-5.26.1
 ARCHIVE=$ARCH_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://www.cpan.org/src/5.0/$TARGET.tar.gz
 [[ ! -e $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
