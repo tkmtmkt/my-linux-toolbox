@@ -11,7 +11,8 @@ DOWNLOAD_URL=http://ftp.gnu.org/gnu/gettext/$TARGET.tar.gz
 [[ ! -e $TARGET ]] && tar zxf $ARCHIVE
 pushd $TARGET
 ./configure --prefix=$PREFIX \
-            --disable-static
+            --enable-static \
+            --disable-shared
 make && make install
 popd
 
