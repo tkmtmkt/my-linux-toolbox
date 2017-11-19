@@ -11,13 +11,18 @@ DOWNLOAD_URL=http://ftp.gnu.org/gnu/ncurses/$TARGET.tar.gz
 [[ ! -e $TARGET ]] && tar zxf $ARCHIVE
 pushd $TARGET
 ./configure --prefix=$PREFIX \
+            --with-pkg-config=$PREFIX/bin/pkg-config \
+            --with-pkg-config-libdir=$PREFIX/lib/pkgconfig \
+            --enable-pc-files \
             --with-shared \
+            --with-normal \
             --without-debug \
-            --without-normal \
+            --without-manpages \
             --enable-widec
 make && make install
-ln -sf libncursesw.so   $PREFIX/lib/libncurses.so
-ln -sf libncursesw.so.6 $PREFIX/lib/libncurses.so.6
+ln -sf libncursesw.a    $PREFIX/lib/libncurses.a
+#ln -sf libncursesw.so   $PREFIX/lib/libncurses.so
+#ln -sf libncursesw.so.6 $PREFIX/lib/libncurses.so.6
 popd
 
 popd
