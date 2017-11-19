@@ -4,13 +4,15 @@ source $SCRIPT_DIR/build-common.sh
 
 pushd $BUILD_DIR
 
-TARGET=pth-2.0.7
+TARGET=npth-1.5
 ARCHIVE=$ARCH_DIR/$TARGET.tar.bz2
-DOWNLOAD_URL=http://ftp.gnu.org/gnu/pth/$TARGET.tar.gz
+DOWNLOAD_URL=https://gnupg.org/ftp/gcrypt/npth/$TARGET.tar.bz2
 [[ ! -e $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
-[[ ! -e $TARGET ]] && tar zxf $ARCHIVE
+[[ ! -e $TARGET ]] && tar jxf $ARCHIVE
 pushd $TARGET
-./configure --prefix=$PREFIX
+./configure --prefix=$PREFIX \
+            --enable-static \
+            --disable-shared
 make && make install
 popd
 
