@@ -11,7 +11,7 @@ DOWNLOAD_URL=http://jonas.nitro.dk/tig/releases/$TARGET.tar.gz
 [[ ! -e $TARGET ]] && tar zxf $ARCHIVE
 pushd $TARGET
 ./configure --prefix=$PREFIX \
-            --without-ncursesw
+            --with-ncursesw
 make && make install
 popd
 
