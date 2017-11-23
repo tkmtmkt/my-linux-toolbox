@@ -11,6 +11,7 @@ DOWNLOAD_URL=https://www.gnupg.org/ftp/gcrypt/gnupg/$TARGET.tar.bz2
 [[ ! -e $TARGET ]] && tar jxf $ARCHIVE
 pushd $TARGET
 ./configure --prefix=$PREFIX \
+            ac_cv_func_inotify_init=no \
             --with-tar=$PREFIX/bin/tar \
             --with-libgpg-error-prefix=$PREFIX \
             --with-libgcrypt-prefix=$PREFIX \
