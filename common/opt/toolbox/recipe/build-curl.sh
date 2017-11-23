@@ -11,11 +11,9 @@ DOWNLOAD_URL=https://curl.haxx.se/download/$TARGET.tar.gz
 [[ ! -e $TARGET ]] && tar zxf $ARCHIVE
 pushd $TARGET
 ./configure --prefix=$PREFIX \
-            --with-ssl \
-            --with-nghttp2 \
-            --enable-manual \
             --enable-static \
-            --disable-shared
+            --disable-shared \
+            --with-ssl=$PREFIX
 make && make install
 popd
 
