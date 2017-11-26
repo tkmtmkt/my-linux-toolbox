@@ -1,4 +1,5 @@
 #!/bin/bash
+# GnuPGのビルド時にコンパイルエラーになるため、共有ライブラリを作成する
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
@@ -12,7 +13,7 @@ DOWNLOAD_URL=https://www.sqlite.org/2017/$TARGET.tar.gz
 pushd $TARGET
 ./configure --prefix=$PREFIX \
             --enable-static \
-            --disable-shared
+            --enable-shared
 make && make install
 popd
 
