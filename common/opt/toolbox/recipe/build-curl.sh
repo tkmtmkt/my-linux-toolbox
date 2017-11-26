@@ -13,7 +13,7 @@ pushd $TARGET
 ./configure --prefix=$PREFIX \
             --enable-static \
             --disable-shared \
-            --with-ssl=$PREFIX
+            --with-ssl=$PREFIX/ssl
 make && make install
 popd
 
