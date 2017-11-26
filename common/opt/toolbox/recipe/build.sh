@@ -15,11 +15,11 @@ $SCRIPT_DIR/build-openssl.sh &&
 $SCRIPT_DIR/build-openssl-fips.sh &&
 
 # util
+$SCRIPT_DIR/build-curl.sh &&
+$SCRIPT_DIR/build-tar.sh &&
 $SCRIPT_DIR/build-p7zip.sh &&
 $SCRIPT_DIR/build-highway.sh &&
 $SCRIPT_DIR/build-global.sh &&
-$SCRIPT_DIR/build-tar.sh &&
-$SCRIPT_DIR/build-curl.sh &&
 $SCRIPT_DIR/build-sqlite3.sh &&
 $SCRIPT_DIR/build-nkf.sh &&
 
