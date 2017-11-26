@@ -13,17 +13,9 @@ pushd $TARGET
 # build for shared
 ./config shared zlib \
          --prefix=$PREFIX \
-         --openssldir=$PREFIX \
          --with-zlib-include=$PREFIX/include \
-         --with-zlib-lib=$PREFIX/lib
-make && make install
-# build for static
-./config no-shared zlib \
-         --prefix=$PREFIX \
-         --openssldir=$PREFIX \
-         --with-zlib-include=$PREFIX/include \
-         --with-zlib-lib=$PREFIX/lib
-make clean
+         --with-zlib-lib=$PREFIX/lib \
+         -static
 make && make install
 popd
 
