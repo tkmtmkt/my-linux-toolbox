@@ -1,6 +1,7 @@
 #!/bin/bash
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
+export CPPFLAGS="-P"
 
 pushd $BUILD_DIR
 
