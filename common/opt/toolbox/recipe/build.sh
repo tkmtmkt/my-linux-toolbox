@@ -12,7 +12,6 @@ $SCRIPT_DIR/build-zlib.sh &&
 $SCRIPT_DIR/build-bzip.sh &&
 $SCRIPT_DIR/build-xz.sh &&
 $SCRIPT_DIR/build-openssl.sh &&
-$SCRIPT_DIR/build-openssl-fips.sh &&
 
 # util
 $SCRIPT_DIR/build-curl.sh &&
