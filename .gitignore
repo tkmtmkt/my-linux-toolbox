@@ -1,6 +1,8 @@
-centos5/opt/toolbox/
-centos6/opt/toolbox/
-centos7/opt/toolbox/
-ubuntu1604/opt/toolbox/
-common/opt/toolbox/arch/
+centos5/usr/local/
+centos6/usr/local/
+centos7/usr/local/
+ubuntu1604/usr/local/
+build/
+arch/
+log/
 *.log

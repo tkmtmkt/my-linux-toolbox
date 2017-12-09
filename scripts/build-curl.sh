@@ -12,7 +12,11 @@ DOWNLOAD_URL=https://curl.haxx.se/download/$TARGET.tar.gz
 pushd $TARGET
 ./configure --prefix=$PREFIX \
             --enable-static \
-            --disable-shared \
+            --enable-shared \
+            --disable-manual \
+            --enable-libcurl-option \
+            --with-ca-bundle=$PREFIX/etc/ca-bundle.crt \
+            --with-ca-path=$PREFIX/etc/certificates \
             --with-ssl=$PREFIX/ssl
 make && make install
 popd

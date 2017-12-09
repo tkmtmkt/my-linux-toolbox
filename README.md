@@ -5,29 +5,34 @@
 ----
 
 ```
-toolbox/
-├─centos5/
-│  ├─toolbox/            ←インストール先
-│  │  └─build/          ←ビルド作業ディレクトリ
-│  └─Dockerfile
-├─centos7/
-│  ├─toolbox/            ←インストール先
-│  │  └─build/          ←ビルド作業ディレクトリ
-│  └─Dockerfile
-├─centos6/
-│  ├─toolbox/            ←インストール先
-│  │  └─build/          ←ビルド作業ディレクトリ
-│  └─Dockerfile
-├─common/
-│  └─opt/
-│      └─toolbox/
-│          ├─recipe/
-│          │  ├─build.sh            ←ビルドスクリプト（個別のビルドスクリプトを全て実行する）
-│          │  ├─build-common.sh     ←共通設定用のスクリプト（個別のビルドスクリプトから呼び出される）
-│          │  ├─build-autoconf.sh   ←個別のビルドスクリプト
-│          │  └─build-m4.sh         ←個別のビルドスクリプト
-│          └─src/                    ←tarballダウンロード先
-└─docker-compose.yml
+/usr/local
+├─bin/
+├─lib/
+└─toolbox/
+    ├─arch/                   ←tarballダウンロード先
+    ├─build/                  ←tビルド作業ディレクトリ
+    ├─docker/
+    │  ├─centos5/
+    │  │  ├─usr/local/toolbox/
+    │  │  └─Dockerfile
+    │  ├─centos6/
+    │  │  ├─usr/local/toolbox/
+    │  │  └─Dockerfile
+    │  ├─centos7/
+    │  │  ├─usr/local/toolbox/
+    │  │  └─Dockerfile
+    │  ├─ubuntu1604/
+    │  │  ├─usr/local/toolbox/
+    │  │  └─Dockerfile
+    │  └─docker-compose.yml
+    ├─log/                    ←ビルド結果のログ出力
+    ├─scripts/
+    │  ├─build-all.sh        ←ビルドスクリプト（個別のビルドスクリプトを全て実行する）
+    │  ├─build-common.sh     ←共通設定用のスクリプト（個別のビルドスクリプトから呼び出される）
+    │  ├─build-autoconf.sh   ←個別のビルドスクリプト
+    │  └─build-m4.sh         ←個別のビルドスクリプト
+    └─build.sh
+
 ```
 
 
@@ -38,11 +43,16 @@ toolbox/
 $ build.sh
 ```
 
-or
+スクリプトテスト
+----------------
+
+異なるLinuxディストリビューションでのスクリプトの動作検証を行うため、
+dockerでビルドとインストールを実行できるようにした。
 
 ```sh
-$ docker-compose run --rm centos5 /opt/toolbox/recipe/build.sh
-$ docker-compose run --rm centos6 /opt/toolbox/recipe/build.sh
-$ docker-compose run --rm centos7 /opt/toolbox/recipe/build.sh
+$ cd docker
+$ centos5/build.sh
+$ centos6/build.sh
+$ centos7/build.sh
+$ ubuntu1604/build.sh
 ```
-
