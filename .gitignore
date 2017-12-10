@@ -1,7 +1,4 @@
-centos5/usr/local/
-centos6/usr/local/
-centos7/usr/local/
-ubuntu1604/usr/local/
+docker/*/usr/local/
 build/
 arch/
 log/

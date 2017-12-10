@@ -5,7 +5,7 @@ services:
     hostname: centos5
     tty: true
     volumes:
-      - './centos5/usr/local/toolbox/:/usr/local/toolbox/:rw'
+      - './centos5/usr/local/:/usr/local/:rw'
       - '../scripts/:/usr/local/toolbox/scripts/:rw'
       - '../arch/:/usr/local/toolbox/arch/:rw'
   centos6:
@@ -13,7 +13,7 @@ services:
     hostname: centos6
     tty: true
     volumes:
-      - './centos6/usr/local/toolbox/:/usr/local/toolbox/:rw'
+      - './centos6/usr/local/:/usr/local/:rw'
       - '../scripts/:/usr/local/toolbox/scripts/:rw'
       - '../arch/:/usr/local/toolbox/arch/:rw'
   centos7:
@@ -21,7 +21,7 @@ services:
     hostname: centos7
     tty: true
     volumes:
-      - './centos7/usr/local/toolbox/:/usr/local/toolbox/:rw'
+      - './centos7/usr/local/:/usr/local/:rw'
       - '../scripts/:/usr/local/toolbox/scripts/:rw'
       - '../arch/:/usr/local/toolbox/arch/:rw'
   ubuntu1604:
@@ -29,6 +29,6 @@ services:
     hostname: ubuntu1604
     tty: true
     volumes:
-      - './ubuntu1604/usr/local/toolbox/:/usr/local/toolbox/:rw'
+      - './ubuntu1604/usr/local/:/usr/local/:rw'
       - '../scripts/:/usr/local/toolbox/scripts/:rw'
       - '../arch/:/usr/local/toolbox/arch/:rw'
