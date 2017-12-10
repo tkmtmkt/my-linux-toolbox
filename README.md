@@ -26,12 +26,10 @@
     │  │  └─Dockerfile
     │  └─docker-compose.yml
     ├─log/                    ←ビルド結果のログ出力
-    ├─scripts/
-    │  ├─build-all.sh        ←ビルドスクリプト（個別のビルドスクリプトを全て実行する）
-    │  ├─build-common.sh     ←共通設定用のスクリプト（個別のビルドスクリプトから呼び出される）
-    │  ├─build-autoconf.sh   ←個別のビルドスクリプト
-    │  └─build-m4.sh         ←個別のビルドスクリプト
-    └─build.sh
+    └─scripts/
+        ├─build-all.sh        ←ビルドスクリプト（個別のビルドスクリプトを全て実行する）
+        ├─build-common.sh     ←共通設定用のスクリプト（個別のビルドスクリプトから呼び出される）
+        └─build-xxxx.sh       ←個別のビルドスクリプト
 
 ```
 
@@ -40,7 +38,7 @@
 --------------------
 
 ```sh
-$ build.sh
+$ ./scripts/build-all.sh
 ```
 
 スクリプトテスト
@@ -51,8 +49,8 @@ dockerでビルドとインストールを実行できるようにした。
 
 ```sh
 $ cd docker
-$ centos5/build.sh
-$ centos6/build.sh
-$ centos7/build.sh
-$ ubuntu1604/build.sh
+$ ./build.sh centos5
+$ ./build.sh centos6
+$ ./build.sh centos7
+$ ./build.sh ubuntu1604
 ```
