@@ -10,12 +10,12 @@ DOWNLOAD_URL=https://www.openssl.org/source/$TARGET.tar.gz
 [[ ! -e $TARGET ]] && tar zxf $ARCHIVE
 
 pushd $TARGET
-# build for shared
 ./config shared zlib \
          --prefix=$PREFIX \
+         --openssldir=$PREFIX/ssl \
          --with-zlib-include=$PREFIX/include \
          --with-zlib-lib=$PREFIX/lib \
-         -static
+         -Wl,-rpath,$PREFIX/lib
 make && make install
 RESULT=$?
 popd
