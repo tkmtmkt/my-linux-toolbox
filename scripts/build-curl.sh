@@ -11,8 +11,6 @@ DOWNLOAD_URL=https://curl.haxx.se/download/$TARGET.tar.gz
 
 pushd $TARGET
 ./configure --prefix=$PREFIX \
-            --enable-static \
-            --enable-shared \
             --disable-manual \
             --enable-libcurl-option \
             --with-ca-bundle=$PREFIX/etc/ca-bundle.crt \
