@@ -13,9 +13,9 @@ pushd $TARGET
 ./configure --prefix=$PREFIX \
             --disable-manual \
             --enable-libcurl-option \
-            --with-ca-bundle=$PREFIX/etc/ca-bundle.crt \
-            --with-ca-path=$PREFIX/etc/certificates \
-            --with-ssl=$PREFIX/ssl
+            --with-ssl=$PREFIX/ssl \
+            --with-ca-path=$PREFIX/ssl \
+            --with-ca-bundle=$PREFIX/ssl/ca-bundle.crt
 make && make install
 RESULT=$?
 popd
