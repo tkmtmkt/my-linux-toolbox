@@ -9,6 +9,8 @@ DOWNLOAD_URL=https://www.openssl.org/source/$TARGET.tar.gz
 [[ ! -e $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
 [[ ! -e $TARGET ]] && tar zxf $ARCHIVE
 
+PERL=$PREFIX/bin/perl
+
 pushd $TARGET
 ./config shared zlib \
          --prefix=$PREFIX \
@@ -16,7 +18,9 @@ pushd $TARGET
          --with-zlib-include=$PREFIX/include \
          --with-zlib-lib=$PREFIX/lib \
          -Wl,-rpath,$PREFIX/lib
-make && make install
+make &&
+make install_sw &&
+make install_man_docs
 RESULT=$?
 popd
 
