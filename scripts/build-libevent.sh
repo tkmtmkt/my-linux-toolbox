@@ -10,8 +10,7 @@ DOWNLOAD_URL=https://github.com/libevent/libevent/releases/download/release-2.1.
 [[ ! -e $TARGET ]] && tar zxf $ARCHIVE
 
 pushd $TARGET
-./configure --prefix=$PREFIX \
-            --disable-openssl
+./configure --prefix=$PREFIX
 make && make install
 RESULT=$?
 popd
