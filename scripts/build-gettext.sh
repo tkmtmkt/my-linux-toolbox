@@ -10,7 +10,8 @@ DOWNLOAD_URL=http://ftp.gnu.org/gnu/gettext/$TARGET.tar.gz
 [[ ! -e $TARGET ]] && tar zxf $ARCHIVE
 
 pushd $TARGET
-./configure --prefix=$PREFIX
+./configure --prefix=$PREFIX \
+            --disable-shared
 make && make install
 RESULT=$?
 popd
