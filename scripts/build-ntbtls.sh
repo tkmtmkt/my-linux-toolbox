@@ -11,8 +11,6 @@ DOWNLOAD_URL=https://gnupg.org/ftp/gcrypt/ntbtls/$TARGET.tar.bz2
 
 pushd $TARGET
 ./configure --prefix=$PREFIX \
-            --enable-static \
-            --disable-shared \
             --with-libgpg-error-prefix=$PREFIX \
             --with-libgcrypt-prefix=$PREFIX \
             --with-ksba-prefix=$PREFIX \

@@ -10,8 +10,7 @@ DOWNLOAD_URL=http://tukaani.org/xz/$TARGET.tar.gz
 [[ ! -e $TARGET ]] && tar zxf $ARCHIVE
 
 pushd $TARGET
-./configure --prefix=$PREFIX \
-            --disable-shared
+./configure --prefix=$PREFIX
 make && make install
 RESULT=$?
 popd

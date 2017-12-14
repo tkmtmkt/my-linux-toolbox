@@ -11,9 +11,7 @@ DOWNLOAD_URL=https://www.sqlite.org/2017/$TARGET.tar.gz
 [[ ! -e $TARGET ]] && tar zxf $ARCHIVE
 
 pushd $TARGET
-./configure --prefix=$PREFIX \
-            --enable-static \
-            --enable-shared
+./configure --prefix=$PREFIX
 make && make install
 RESULT=$?
 popd

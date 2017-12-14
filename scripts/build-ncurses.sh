@@ -15,15 +15,14 @@ pushd $TARGET
             --with-pkg-config=$PREFIX/bin/pkg-config \
             --with-pkg-config-libdir=$PREFIX/lib/pkgconfig \
             --enable-pc-files \
-            --with-shared \
             --with-normal \
             --without-debug \
             --without-manpages \
             --enable-widec
 make && make install &&
-ln -sf libncursesw.a    $PREFIX/lib/libncurses.a
-#ln -sf libncursesw.so   $PREFIX/lib/libncurses.so
-#ln -sf libncursesw.so.6 $PREFIX/lib/libncurses.so.6
+ln -sf $PREFIX/lib/libncurses{w,}.a &&
+ln -sf $PREFIX/lib/libncurses{w,}.so &&
+ln -sf $PREFIX/lib/libncurses{w,}.so.6
 RESULT=$?
 popd
 

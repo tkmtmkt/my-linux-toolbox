@@ -10,9 +10,7 @@ DOWNLOAD_URL=https://www.gnupg.org/ftp/gcrypt/libgpg-error/$TARGET.tar.bz2
 [[ ! -e $TARGET ]] && tar jxf $ARCHIVE
 
 pushd $TARGET
-./configure --prefix=$PREFIX \
-            --enable-static \
-            --disable-shared
+./configure --prefix=$PREFIX
 make && make install
 RESULT=$?
 popd

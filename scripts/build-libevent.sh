@@ -11,8 +11,6 @@ DOWNLOAD_URL=https://github.com/libevent/libevent/releases/download/release-2.1.
 
 pushd $TARGET
 ./configure --prefix=$PREFIX \
-            --enable-static \
-            --disable-shared \
             --disable-openssl
 make && make install
 RESULT=$?

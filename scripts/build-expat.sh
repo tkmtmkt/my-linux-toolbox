@@ -10,9 +10,7 @@ DOWNLOAD_URL=https://sourceforge.net/projects/expat/files/expat/2.2.5/$TARGET.ta
 [[ ! -e $TARGET ]] && tar jxf $ARCHIVE
 
 pushd $TARGET
-./configure --prefix=$PREFIX \
-            --enable-static \
-            --disable-shared
+./configure --prefix=$PREFIX
 make && make install
 RESULT=$?
 popd

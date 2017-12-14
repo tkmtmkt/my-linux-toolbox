@@ -12,7 +12,7 @@ DOWNLOAD_URL=https://www.openssl.org/source/$TARGET.tar.gz
 PERL=$PREFIX/bin/perl
 
 pushd $TARGET
-./config shared zlib \
+./config zlib \
          --prefix=$PREFIX \
          --openssldir=$PREFIX/ssl \
          --with-zlib-include=$PREFIX/include \

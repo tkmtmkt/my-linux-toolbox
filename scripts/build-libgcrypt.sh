@@ -11,8 +11,6 @@ DOWNLOAD_URL=https://www.gnupg.org/ftp/gcrypt/libgcrypt/$TARGET.tar.bz2
 
 pushd $TARGET
 ./configure --prefix=$PREFIX \
-            --enable-static \
-            --disable-shared \
             --with-libgpg-error-prefix=$PREFIX \
             --with-pth-prefix=$PREFIX
 make && make install

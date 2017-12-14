@@ -11,8 +11,6 @@ DOWNLOAD_URL=https://www.gnupg.org/ftp/gcrypt/libksba/$TARGET.tar.bz2
 
 pushd $TARGET
 ./configure --prefix=$PREFIX \
-            --enable-static \
-            --disable-shared \
             --with-libgpg-error-prefix=$PREFIX
 make && make install
 RESULT=$?
