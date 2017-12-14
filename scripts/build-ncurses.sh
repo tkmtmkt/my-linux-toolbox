@@ -12,13 +12,15 @@ DOWNLOAD_URL=http://ftp.gnu.org/gnu/ncurses/$TARGET.tar.gz
 
 pushd $TARGET
 ./configure --prefix=$PREFIX \
+            --without-manpages \
             --with-pkg-config=$PREFIX/bin/pkg-config \
             --with-pkg-config-libdir=$PREFIX/lib/pkgconfig \
             --enable-pc-files \
-            --with-normal \
+            --with-shared \
             --without-debug \
-            --without-manpages \
-            --enable-widec
+            --enable-rpath \
+            --enable-widec \
+            --enable-ext-colors
 make && make install &&
 ln -sf $PREFIX/lib/libncurses{w,}.a &&
 ln -sf $PREFIX/lib/libncurses{w,}.so &&
