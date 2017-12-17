@@ -12,7 +12,8 @@ DOWNLOAD_URL=https://www.sqlite.org/2017/$TARGET.tar.gz
 tar zxf $ARCHIVE
 
 pushd $TARGET
-./configure --prefix=$PREFIX
+./configure --prefix=$PREFIX \
+            --enable-readline
 make && make install
 RESULT=$?
 popd
