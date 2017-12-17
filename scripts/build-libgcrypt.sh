@@ -7,7 +7,8 @@ TARGET=libgcrypt-1.8.1
 ARCHIVE=$ARCH_DIR/$TARGET.tar.bz2
 DOWNLOAD_URL=https://www.gnupg.org/ftp/gcrypt/libgcrypt/$TARGET.tar.bz2
 [[ ! -e $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
-[[ ! -e $TARGET ]] && tar jxf $ARCHIVE
+[[ -e $TARGET ]] && rm -rf $TARGET
+tar jxf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX \

@@ -7,7 +7,8 @@ TARGET=autoconf-2.69
 ARCHIVE=$ARCH_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://ftp.gnu.org/gnu/autoconf/$TARGET.tar.gz
 [[ ! -e $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
-[[ ! -e $TARGET ]] && tar zxf $ARCHIVE
+[[ -e $TARGET ]] && rm -rf $TARGET
+tar zxf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX

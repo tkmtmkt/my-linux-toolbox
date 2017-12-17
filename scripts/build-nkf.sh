@@ -7,7 +7,8 @@ TARGET=nkf-2.1.4
 ARCHIVE=$ARCH_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=https://ja.osdn.net/projects/nkf/downloads/64158/$TARGET.tar.gz
 [[ ! -e $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
-[[ ! -e $TARGET ]] && tar zxf $ARCHIVE
+[[ -e $TARGET ]] && rm -rf $TARGET
+tar zxf $ARCHIVE
 
 pushd $TARGET
 sed -i "s|/usr/local|$PREFIX|g" Makefile
