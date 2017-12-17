@@ -21,6 +21,7 @@ pushd $TARGET
          -Wl,-rpath,$PREFIX/lib
 make &&
 make install_sw &&
+make install_ssldirs &&
 make install_man_docs
 RESULT=$?
 popd
