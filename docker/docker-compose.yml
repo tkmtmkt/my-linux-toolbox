@@ -5,6 +5,7 @@ services:
     hostname: centos5
     tty: true
     volumes:
+      - './centos5/home/:/home/:rw'
       - './centos5/usr/local/:/usr/local/:rw'
       - '../scripts/:/usr/local/toolbox/scripts/:rw'
       - '../arch/:/usr/local/toolbox/arch/:rw'
@@ -13,6 +14,7 @@ services:
     hostname: centos6
     tty: true
     volumes:
+      - './centos6/home/:/home/:rw'
       - './centos6/usr/local/:/usr/local/:rw'
       - '../scripts/:/usr/local/toolbox/scripts/:rw'
       - '../arch/:/usr/local/toolbox/arch/:rw'
@@ -21,6 +23,7 @@ services:
     hostname: centos7
     tty: true
     volumes:
+      - './centos7/home/:/home/:rw'
       - './centos7/usr/local/:/usr/local/:rw'
       - '../scripts/:/usr/local/toolbox/scripts/:rw'
       - '../arch/:/usr/local/toolbox/arch/:rw'
@@ -29,6 +32,7 @@ services:
     hostname: ubuntu1604
     tty: true
     volumes:
+      - './ubuntu1604/home/:/home/:rw'
       - './ubuntu1604/usr/local/:/usr/local/:rw'
       - '../scripts/:/usr/local/toolbox/scripts/:rw'
       - '../arch/:/usr/local/toolbox/arch/:rw'
