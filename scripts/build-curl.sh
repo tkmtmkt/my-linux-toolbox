@@ -7,7 +7,7 @@ TARGET=curl-7.56.1
 ARCHIVE=$ARCH_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=https://curl.haxx.se/download/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
-[[ -e $TARGET ]] && rm -rf $TARGET
+[[ -d $TARGET ]] && rm -rf $TARGET
 tar zxf $ARCHIVE
 
 CA_CERT=$ARCH_DIR/cacert.pem
@@ -22,7 +22,7 @@ pushd $TARGET
             --enable-libcurl-option \
             --with-ssl=$PREFIX/ssl \
             --with-ca-path=$CA_PATH \
-            --with-ca-bundle=$CA_BUNDLE
+            --with-ca-bundle=$CA_BUNDLE &&
 make && make install
 RESULT=$?
 popd

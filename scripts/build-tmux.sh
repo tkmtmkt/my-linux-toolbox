@@ -6,13 +6,13 @@ pushd $BUILD_DIR
 TARGET=tmux-2.6
 ARCHIVE=$ARCH_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=https://github.com/tmux/tmux/archive/2.6.tar.gz
-[[ ! -e $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
-[[ -e $TARGET ]] && rm -rf $TARGET
+[[ ! -s $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
+[[ -d $TARGET ]] && rm -rf $TARGET
 tar zxf $ARCHIVE
 
 pushd $TARGET
 ./autogen.sh
-./configure --prefix=$PREFIX
+./configure --prefix=$PREFIX &&
 make && make install
 RESULT=$?
 popd

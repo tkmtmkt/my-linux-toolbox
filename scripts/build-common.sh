@@ -14,7 +14,7 @@ export PATH=$PREFIX/bin:$PATH
 export MANPATH=$PREFIX/man:
 
 export ARCH_DIR=$BASE_DIR/arch
-[[ ! -e $ARCH_DIR ]] && mkdir -p $ARCH_DIR
+[[ ! -d $ARCH_DIR ]] && mkdir -p $ARCH_DIR
 
 export BUILD_DIR=$BASE_DIR/build
-[[ ! -e $BUILD_DIR ]] && mkdir -p $BUILD_DIR
+[[ ! -d $BUILD_DIR ]] && mkdir -p $BUILD_DIR

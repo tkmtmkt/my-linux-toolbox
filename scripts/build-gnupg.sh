@@ -6,8 +6,8 @@ pushd $BUILD_DIR
 TARGET=gnupg-2.2.2
 ARCHIVE=$ARCH_DIR/$TARGET.tar.bz2
 DOWNLOAD_URL=https://www.gnupg.org/ftp/gcrypt/gnupg/$TARGET.tar.bz2
-[[ ! -e $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
-[[ -e $TARGET ]] && rm -rf $TARGET
+[[ ! -s $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
+[[ -d $TARGET ]] && rm -rf $TARGET
 tar jxf $ARCHIVE
 
 pushd $TARGET
@@ -21,7 +21,7 @@ pushd $TARGET
             --with-npth-prefix=$PREFIX \
             --with-ntbtls-prefix=$PREFIX \
             --with-zlib=$PREFIX \
-            --with-bzip2=$PREFIX
+            --with-bzip2=$PREFIX &&
 make && make install
 RESULT=$?
 popd

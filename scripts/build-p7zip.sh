@@ -6,12 +6,12 @@ pushd $BUILD_DIR
 TARGET=p7zip_16.02
 ARCHIVE=$ARCH_DIR/${TARGET}_src_all.tar.bz2
 DOWNLOAD_URL=https://sourceforge.net/projects/p7zip/files/p7zip/16.02/${TARGET}_src_all.tar.bz2
-[[ ! -e $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
-[[ -e $TARGET ]] && rm -rf $TARGET
+[[ ! -s $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
+[[ -d $TARGET ]] && rm -rf $TARGET
 tar jxf $ARCHIVE
 
 pushd $TARGET
-sed -i "s|/usr/local|$PREFIX|g" makefile.common
+sed -i "s|/usr/local|$PREFIX|g" makefile.common &&
 make all3 && make install
 RESULT=$?
 popd

@@ -6,12 +6,12 @@ pushd $BUILD_DIR
 TARGET=m4-1.4.18
 ARCHIVE=$ARCH_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://ftp.gnu.org/gnu/m4/$TARGET.tar.gz
-[[ ! -e $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
-[[ -e $TARGET ]] && rm -rf $TARGET
+[[ ! -s $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
+[[ -d $TARGET ]] && rm -rf $TARGET
 tar zxf $ARCHIVE
 
 pushd $TARGET
-./configure --prefix=$PREFIX
+./configure --prefix=$PREFIX &&
 make && make install
 RESULT=$?
 popd
