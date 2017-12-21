@@ -17,8 +17,8 @@ pushd $TARGET
             --with-ksba-prefix=$PREFIX \
             --with-zlib=$PREFIX &&
 # CentOS6でのコンパイルエラー対処
-sed -i -e '100 s/^typedef/\/\/typedef/' src/context.h &&
-sed -i -e '196 s/^typedef/\/\/typedef/' src/ciphersuites.h &&
+sed -i -e '100 s|^typedef|//typedef|' src/context.h &&
+sed -i -e '196 s|^typedef|//typedef|' src/ciphersuites.h &&
 make && make install
 RESULT=$?
 popd
