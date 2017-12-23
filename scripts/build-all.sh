@@ -29,6 +29,7 @@ $SCRIPT_DIR/build-highway.sh      > $LOG_DIR/result-highway-$(date +%Y%m%d%H%M).
 $SCRIPT_DIR/build-global.sh       > $LOG_DIR/result-global-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-sqlite3.sh      > $LOG_DIR/result-sqlite3-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-nkf.sh          > $LOG_DIR/result-nkf-$(date +%Y%m%d%H%M).log 2>&1 &&
+$SCRIPT_DIR/build-jq.sh           > $LOG_DIR/result-jq-$(date +%Y%m%d%H%M).log 2>&1 &&
 
 # vim
 $SCRIPT_DIR/build-vim.sh          > $LOG_DIR/result-vim-$(date +%Y%m%d%H%M).log 2>&1 &&
