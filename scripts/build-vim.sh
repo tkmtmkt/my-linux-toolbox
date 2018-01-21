@@ -12,10 +12,9 @@ tar zxf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX \
-            --disable-selinux \
+            --with-features=huge \
             --enable-multibyte \
-            --enable-fail-if-missing \
-            --with-features=huge &&
+            --enable-fail-if-missing &&
 make && make install &&
 ln -sf vim $PREFIX/bin/vi
 RESULT=$?
