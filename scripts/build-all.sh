@@ -52,7 +52,7 @@ $SCRIPT_DIR/build-libgcrypt.sh    > $LOG_DIR/result-libgcrypt-$(date +%Y%m%d%H%M
 $SCRIPT_DIR/build-libksba.sh      > $LOG_DIR/result-libksba-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-libassuan.sh    > $LOG_DIR/result-libassuan-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-ntbtls.sh       > $LOG_DIR/result-ntbtls-$(date +%Y%m%d%H%M).log 2>&1 &&
-$SCRIPT_DIR/build-gnupg.sh        > $LOG_DIR/result-gnupg-$(date +%Y%m%d%H%M).log 2>&1
+$SCRIPT_DIR/build-gnupg.sh        > $LOG_DIR/result-gnupg-$(date +%Y%m%d%H%M).log 2>&1 &&
 
 # language
 $SCRIPT_DIR/build-python.sh       > $LOG_DIR/result-python-$(date +%Y%m%d%H%M).log 2>&1
