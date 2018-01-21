@@ -32,6 +32,9 @@ $SCRIPT_DIR/build-sqlite3.sh      > $LOG_DIR/result-sqlite3-$(date +%Y%m%d%H%M).
 $SCRIPT_DIR/build-nkf.sh          > $LOG_DIR/result-nkf-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-jq.sh           > $LOG_DIR/result-jq-$(date +%Y%m%d%H%M).log 2>&1 &&
 
+# language
+$SCRIPT_DIR/build-python.sh       > $LOG_DIR/result-python-$(date +%Y%m%d%H%M).log 2>&1 &&
+
 # vim
 $SCRIPT_DIR/build-vim.sh          > $LOG_DIR/result-vim-$(date +%Y%m%d%H%M).log 2>&1 &&
 
@@ -50,7 +53,4 @@ $SCRIPT_DIR/build-libgcrypt.sh    > $LOG_DIR/result-libgcrypt-$(date +%Y%m%d%H%M
 $SCRIPT_DIR/build-libksba.sh      > $LOG_DIR/result-libksba-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-libassuan.sh    > $LOG_DIR/result-libassuan-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-ntbtls.sh       > $LOG_DIR/result-ntbtls-$(date +%Y%m%d%H%M).log 2>&1 &&
-$SCRIPT_DIR/build-gnupg.sh        > $LOG_DIR/result-gnupg-$(date +%Y%m%d%H%M).log 2>&1 &&
-
-# language
-$SCRIPT_DIR/build-python.sh       > $LOG_DIR/result-python-$(date +%Y%m%d%H%M).log 2>&1
+$SCRIPT_DIR/build-gnupg.sh        > $LOG_DIR/result-gnupg-$(date +%Y%m%d%H%M).log 2>&1
