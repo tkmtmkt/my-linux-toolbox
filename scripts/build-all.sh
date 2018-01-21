@@ -19,6 +19,7 @@ $SCRIPT_DIR/build-gettext.sh      > $LOG_DIR/result-gettext-$(date +%Y%m%d%H%M).
 $SCRIPT_DIR/build-readline.sh     > $LOG_DIR/result-readline-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-bzip.sh         > $LOG_DIR/result-bzip-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-xz.sh           > $LOG_DIR/result-xz-$(date +%Y%m%d%H%M).log 2>&1 &&
+$SCRIPT_DIR/build-expat.sh        > $LOG_DIR/result-expat-$(date +%Y%m%d%H%M).log 2>&1 &&
 
 # util
 $SCRIPT_DIR/build-openssl.sh      > $LOG_DIR/result-openssl-$(date +%Y%m%d%H%M).log 2>&1 &&
@@ -35,7 +36,6 @@ $SCRIPT_DIR/build-jq.sh           > $LOG_DIR/result-jq-$(date +%Y%m%d%H%M).log 2
 $SCRIPT_DIR/build-vim.sh          > $LOG_DIR/result-vim-$(date +%Y%m%d%H%M).log 2>&1 &&
 
 # git
-$SCRIPT_DIR/build-expat.sh        > $LOG_DIR/result-expat-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-git.sh          > $LOG_DIR/result-git-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-tig.sh          > $LOG_DIR/result-tig-$(date +%Y%m%d%H%M).log 2>&1 &&
 
@@ -51,3 +51,6 @@ $SCRIPT_DIR/build-libksba.sh      > $LOG_DIR/result-libksba-$(date +%Y%m%d%H%M).
 $SCRIPT_DIR/build-libassuan.sh    > $LOG_DIR/result-libassuan-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-ntbtls.sh       > $LOG_DIR/result-ntbtls-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-gnupg.sh        > $LOG_DIR/result-gnupg-$(date +%Y%m%d%H%M).log 2>&1
+
+# language
+$SCRIPT_DIR/build-python.sh       > $LOG_DIR/result-python-$(date +%Y%m%d%H%M).log 2>&1
