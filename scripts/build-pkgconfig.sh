@@ -7,7 +7,7 @@ TARGET=pkg-config-0.29.2
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://pkg-config.freedesktop.org/releases/$TARGET.tar.gz
-[[ ! -s $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
+[[ ! -s $ARCHIVE ]] && curl -sSL -o $ARCHIVE $DOWNLOAD_URL
 
 # build
 pushd $BUILD_DIR

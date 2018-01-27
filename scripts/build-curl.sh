@@ -7,10 +7,10 @@ TARGET=curl-7.56.1
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=https://curl.haxx.se/download/$TARGET.tar.gz
-[[ ! -s $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
+[[ ! -s $ARCHIVE ]] && curl -sSL $DOWNLOAD_URL -o $ARCHIVE
 
 CA_CERT=$ARCHIVES_DIR/cacert.pem
-[[ ! -s $CA_CERT ]] && wget -O $CA_CERT http://curl.haxx.se/ca/cacert.pem
+[[ ! -s $CA_CERT ]] && curl -sSL http://curl.haxx.se/ca/cacert.pem -o $CA_CERT
 
 # build
 pushd $BUILD_DIR

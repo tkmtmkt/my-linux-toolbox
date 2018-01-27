@@ -7,7 +7,7 @@ TARGET=Python-3.6.4
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tgz
 DOWNLOAD_URL=https://www.python.org/ftp/python/3.6.4/$TARGET.tgz
-[[ ! -s $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
+[[ ! -s $ARCHIVE ]] && curl -sSL -o $ARCHIVE $DOWNLOAD_URL
 
 # build
 pushd $BUILD_DIR

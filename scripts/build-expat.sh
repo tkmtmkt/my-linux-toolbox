@@ -7,7 +7,7 @@ TARGET=expat-2.2.5
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2
 DOWNLOAD_URL=https://sourceforge.net/projects/expat/files/expat/2.2.5/$TARGET.tar.bz2
-[[ ! -s $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
+[[ ! -s $ARCHIVE ]] && curl -sSL $DOWNLOAD_URL -o $ARCHIVE
 
 # build
 pushd $BUILD_DIR
