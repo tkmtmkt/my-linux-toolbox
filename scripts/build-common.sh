@@ -13,8 +13,8 @@ export LD_LIBRARY_PATH=$PREFIX/lib
 export PATH=$PREFIX/bin:$PATH
 export MANPATH=$PREFIX/man:
 
-export ARCH_DIR=$BASE_DIR/arch
-[[ ! -d $ARCH_DIR ]] && mkdir -p $ARCH_DIR
+export ARCHIVES_DIR=$BASE_DIR/archives
+[[ ! -d $ARCHIVES_DIR ]] && mkdir -p $ARCHIVES_DIR
 
 export BUILD_DIR=$BASE_DIR/build
 [[ ! -d $BUILD_DIR ]] && mkdir -p $BUILD_DIR

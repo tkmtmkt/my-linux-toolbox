@@ -9,7 +9,7 @@
 ├─bin/
 ├─lib/
 └─toolbox/
-    ├─arch/                   ←tarballダウンロード先
+    ├─archives/               ←tarballダウンロード先
     ├─build/                  ←tビルド作業ディレクトリ
     ├─docker/
     │  ├─centos5/

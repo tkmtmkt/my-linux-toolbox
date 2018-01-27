@@ -1,6 +1,6 @@
+archives/
+build/
+log/
 docker/*/home/
 docker/*/usr/local/
-build/
-arch/
-log/
 *.log

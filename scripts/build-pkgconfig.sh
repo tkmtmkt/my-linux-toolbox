@@ -4,7 +4,7 @@ source $SCRIPT_DIR/build-common.sh
 
 pushd $BUILD_DIR
 TARGET=pkg-config-0.29.2
-ARCHIVE=$ARCH_DIR/$TARGET.tar.gz
+ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://pkg-config.freedesktop.org/releases/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
 [[ -d $TARGET ]] && rm -rf $TARGET

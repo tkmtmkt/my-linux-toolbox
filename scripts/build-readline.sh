@@ -4,7 +4,7 @@ source $SCRIPT_DIR/build-common.sh
 
 pushd $BUILD_DIR
 TARGET=readline-7.0
-ARCHIVE=$ARCH_DIR/$TARGET.tar.gz
+ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://ftp.gnu.org/gnu/readline/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
 [[ -d $TARGET ]] && rm -rf $TARGET
@@ -14,8 +14,8 @@ tar zxf $ARCHIVE
 for n in 001 002 003
 do
   PATCH="readline70-$n"
-  [[ ! -s "$ARCH_DIR/$PATCH" ]] && wget http://ftp.gnu.org/gnu/readline/readline-7.0-patches/$PATCH -O "$ARCH_DIR/$PATCH"
-  [[ ! -s "$TARGET/$PATCH" ]] && cp "$ARCH_DIR/$PATCH" "$TARGET/$PATCH"
+  [[ ! -s "$ARCHIVES_DIR/$PATCH" ]] && wget http://ftp.gnu.org/gnu/readline/readline-7.0-patches/$PATCH -O "$ARCHIVES_DIR/$PATCH"
+  [[ ! -s "$TARGET/$PATCH" ]] && cp "$ARCHIVES_DIR/$PATCH" "$TARGET/$PATCH"
 done
 
 pushd $TARGET

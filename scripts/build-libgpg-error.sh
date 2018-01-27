@@ -4,7 +4,7 @@ source $SCRIPT_DIR/build-common.sh
 
 pushd $BUILD_DIR
 TARGET=libgpg-error-1.27
-ARCHIVE=$ARCH_DIR/$TARGET.tar.bz2
+ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2
 DOWNLOAD_URL=https://www.gnupg.org/ftp/gcrypt/libgpg-error/$TARGET.tar.bz2
 [[ ! -s $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
 [[ -d $TARGET ]] && rm -rf $TARGET
