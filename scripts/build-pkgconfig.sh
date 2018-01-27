@@ -2,11 +2,15 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-pushd $BUILD_DIR
 TARGET=pkg-config-0.29.2
+
+# download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://pkg-config.freedesktop.org/releases/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
+
+# build
+pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
 tar zxf $ARCHIVE
 

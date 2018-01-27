@@ -1,13 +1,17 @@
 #!/bin/bash
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
-export CPPFLAGS="-P"
 
-pushd $BUILD_DIR
 TARGET=ncurses-6.0
+
+# download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://ftp.gnu.org/gnu/ncurses/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
+
+# build
+export CPPFLAGS="-P"
+pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
 tar zxf $ARCHIVE
 

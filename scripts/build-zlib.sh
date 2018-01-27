@@ -2,11 +2,15 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-pushd $BUILD_DIR
 TARGET=zlib-1.2.11
+
+# download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://www.zlib.net/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && wget --no-check-certificate -O $ARCHIVE $DOWNLOAD_URL
+
+# build
+pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
 tar zxf $ARCHIVE
 
