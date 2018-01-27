@@ -15,7 +15,7 @@ pushd $BUILD_DIR
 tar zxf $ARCHIVE
 
 pushd $TARGET
-./autogen.sh
+./autogen.sh &&
 ./configure --prefix=$PREFIX &&
 make && make install
 RESULT=$?
