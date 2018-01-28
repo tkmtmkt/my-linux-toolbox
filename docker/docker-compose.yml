@@ -8,7 +8,7 @@ services:
       - './centos5/home/:/home/:rw'
       - './centos5/usr/local/:/usr/local/:rw'
       - '../scripts/:/usr/local/toolbox/scripts/:rw'
-      - '../arch/:/usr/local/toolbox/arch/:rw'
+      - '../archives/:/usr/local/toolbox/archives/:rw'
   centos6:
     build: ./centos6
     hostname: centos6
@@ -17,7 +17,7 @@ services:
       - './centos6/home/:/home/:rw'
       - './centos6/usr/local/:/usr/local/:rw'
       - '../scripts/:/usr/local/toolbox/scripts/:rw'
-      - '../arch/:/usr/local/toolbox/arch/:rw'
+      - '../archives/:/usr/local/toolbox/archives/:rw'
   centos7:
     build: ./centos7
     hostname: centos7
@@ -26,7 +26,7 @@ services:
       - './centos7/home/:/home/:rw'
       - './centos7/usr/local/:/usr/local/:rw'
       - '../scripts/:/usr/local/toolbox/scripts/:rw'
-      - '../arch/:/usr/local/toolbox/arch/:rw'
+      - '../archives/:/usr/local/toolbox/archives/:rw'
   ubuntu1604:
     build: ./ubuntu1604
     hostname: ubuntu1604
@@ -35,4 +35,4 @@ services:
       - './ubuntu1604/home/:/home/:rw'
       - './ubuntu1604/usr/local/:/usr/local/:rw'
       - '../scripts/:/usr/local/toolbox/scripts/:rw'
-      - '../arch/:/usr/local/toolbox/arch/:rw'
+      - '../archives/:/usr/local/toolbox/archives/:rw'
