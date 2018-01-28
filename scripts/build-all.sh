@@ -14,11 +14,11 @@ $SCRIPT_DIR/build-automake.sh     > $LOG_DIR/result-automake-$(date +%Y%m%d%H%M)
 
 # library
 $SCRIPT_DIR/build-zlib.sh         > $LOG_DIR/result-zlib-$(date +%Y%m%d%H%M).log 2>&1 &&
+$SCRIPT_DIR/build-bzip.sh         > $LOG_DIR/result-bzip-$(date +%Y%m%d%H%M).log 2>&1 &&
+$SCRIPT_DIR/build-xz.sh           > $LOG_DIR/result-xz-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-ncurses.sh      > $LOG_DIR/result-ncurses-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-gettext.sh      > $LOG_DIR/result-gettext-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-readline.sh     > $LOG_DIR/result-readline-$(date +%Y%m%d%H%M).log 2>&1 &&
-$SCRIPT_DIR/build-bzip.sh         > $LOG_DIR/result-bzip-$(date +%Y%m%d%H%M).log 2>&1 &&
-$SCRIPT_DIR/build-xz.sh           > $LOG_DIR/result-xz-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-expat.sh        > $LOG_DIR/result-expat-$(date +%Y%m%d%H%M).log 2>&1 &&
 
 # util
@@ -32,8 +32,15 @@ $SCRIPT_DIR/build-sqlite3.sh      > $LOG_DIR/result-sqlite3-$(date +%Y%m%d%H%M).
 $SCRIPT_DIR/build-nkf.sh          > $LOG_DIR/result-nkf-$(date +%Y%m%d%H%M).log 2>&1 &&
 $SCRIPT_DIR/build-jq.sh           > $LOG_DIR/result-jq-$(date +%Y%m%d%H%M).log 2>&1 &&
 
+# gcc
+$SCRIPT_DIR/build-gmp.sh          > $LOG_DIR/result-gmp-$(date +%Y%m%d%H%M).log 2>&1 &&
+$SCRIPT_DIR/build-mpfr.sh         > $LOG_DIR/result-mpfr-$(date +%Y%m%d%H%M).log 2>&1 &&
+$SCRIPT_DIR/build-mpc.sh          > $LOG_DIR/result-mpc-$(date +%Y%m%d%H%M).log 2>&1 &&
+$SCRIPT_DIR/build-gcc.sh          > $LOG_DIR/result-gcc-$(date +%Y%m%d%H%M).log 2>&1 &&
+
 # language
 $SCRIPT_DIR/build-python.sh       > $LOG_DIR/result-python-$(date +%Y%m%d%H%M).log 2>&1 &&
+$SCRIPT_DIR/build-ruby.sh         > $LOG_DIR/result-ruby-$(date +%Y%m%d%H%M).log 2>&1 &&
 
 # vim
 $SCRIPT_DIR/build-vim.sh          > $LOG_DIR/result-vim-$(date +%Y%m%d%H%M).log 2>&1 &&
