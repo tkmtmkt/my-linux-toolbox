@@ -1,14 +1,5 @@
 version: '2'
 services:
-  centos5:
-    build: ./centos5
-    hostname: centos5
-    tty: true
-    volumes:
-      - './centos5/home/:/home/:rw'
-      - './centos5/usr/local/:/usr/local/:rw'
-      - '../scripts/:/usr/local/toolbox/scripts/:rw'
-      - '../archives/:/usr/local/toolbox/archives/:rw'
   centos6:
     build: ./centos6
     hostname: centos6
