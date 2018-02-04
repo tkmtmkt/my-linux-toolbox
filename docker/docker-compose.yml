@@ -6,24 +6,24 @@ services:
     tty: true
     volumes:
       - './centos6/home/:/home/:rw'
-      - './centos6/usr/local/:/usr/local/:rw'
-      - '../scripts/:/usr/local/toolbox/scripts/:rw'
-      - '../archives/:/usr/local/toolbox/archives/:rw'
+      - './centos6/opt/toolbox/:/opt/toolbox/:rw'
+      - '../scripts/:/opt/toolbox/workspace/scripts/:rw'
+      - '../archives/:/opt/toolbox/workspace/archives/:rw'
   centos7:
     build: ./centos7
     hostname: centos7
     tty: true
     volumes:
       - './centos7/home/:/home/:rw'
-      - './centos7/usr/local/:/usr/local/:rw'
-      - '../scripts/:/usr/local/toolbox/scripts/:rw'
-      - '../archives/:/usr/local/toolbox/archives/:rw'
+      - './centos7/opt/toolbox/:/opt/toolbox/:rw'
+      - '../scripts/:/opt/toolbox/workspace/scripts/:rw'
+      - '../archives/:/opt/toolbox/workspace/archives/:rw'
   ubuntu1604:
     build: ./ubuntu1604
     hostname: ubuntu1604
     tty: true
     volumes:
       - './ubuntu1604/home/:/home/:rw'
-      - './ubuntu1604/usr/local/:/usr/local/:rw'
-      - '../scripts/:/usr/local/toolbox/scripts/:rw'
-      - '../archives/:/usr/local/toolbox/archives/:rw'
+      - './ubuntu1604/opt/toolbox/:/opt/toolbox/:rw'
+      - '../scripts/:/opt/toolbox/workspace/scripts/:rw'
+      - '../archives/:/opt/toolbox/workspace/archives/:rw'

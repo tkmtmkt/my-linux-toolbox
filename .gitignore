@@ -2,5 +2,5 @@ archives/
 build/
 log/
 docker/*/home/
-docker/*/usr/local/
+docker/*/opt/
 *.log
