@@ -47,10 +47,10 @@ nkf
 jq
 
 ### gcc
-gmp
-mpfr
-mpc
-gcc
+#gmp
+#mpfr
+#mpc
+#gcc
 
 ### language
 python

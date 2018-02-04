@@ -2,11 +2,13 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=ruby-2.5.0
+TARGET=ruby-2.4.3
+#TARGET=ruby-2.5.0
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
-DOWNLOAD_URL=https://cache.ruby-lang.org/pub/ruby/2.5/$TARGET.tar.gz
+DOWNLOAD_URL=https://cache.ruby-lang.org/pub/ruby/2.4/$TARGET.tar.gz
+#DOWNLOAD_URL=https://cache.ruby-lang.org/pub/ruby/2.5/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -sSL $DOWNLOAD_URL -o $ARCHIVE
 
 BUNDLER_GEM=bundler-1.16.1.gem

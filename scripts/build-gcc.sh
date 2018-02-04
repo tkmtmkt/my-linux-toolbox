@@ -20,7 +20,8 @@ pushd $TARGET
             --disable-bootstrap \
             --disable-multilib \
             --with-gmp \
-            --with-mpfr &&
+            --with-mpfr \
+            --with-mpc  &&
 make && make install
 RESULT=$?
 popd
