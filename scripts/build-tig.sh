@@ -2,11 +2,11 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=tig-2.2
+TARGET=tig-2.3.3
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
-DOWNLOAD_URL=http://jonas.nitro.dk/tig/releases/$TARGET.tar.gz
+DOWNLOAD_URL=https://github.com/jonas/tig/releases/download/$TARGET/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -sSL $DOWNLOAD_URL -o $ARCHIVE
 
 # build
