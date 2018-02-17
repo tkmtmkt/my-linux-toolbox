@@ -7,7 +7,7 @@ TARGET=ncurses-6.0
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://ftp.gnu.org/gnu/ncurses/$TARGET.tar.gz
-[[ ! -s $ARCHIVE ]] && curl -sSL $DOWNLOAD_URL -o $ARCHIVE
+[[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 # build
 export CPPFLAGS="-P"

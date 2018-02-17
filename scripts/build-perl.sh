@@ -7,7 +7,7 @@ TARGET=perl-5.26.1
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://www.cpan.org/src/5.0/$TARGET.tar.gz
-[[ ! -s $ARCHIVE ]] && curl -sSL -o $ARCHIVE $DOWNLOAD_URL
+[[ ! -s $ARCHIVE ]] && curl -ksSL -o $ARCHIVE $DOWNLOAD_URL
 
 # build
 pushd $BUILD_DIR

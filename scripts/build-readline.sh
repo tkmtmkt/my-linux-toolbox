@@ -7,13 +7,13 @@ TARGET=readline-7.0
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://ftp.gnu.org/gnu/readline/$TARGET.tar.gz
-[[ ! -s $ARCHIVE ]] && curl -sSL -o $ARCHIVE $DOWNLOAD_URL
+[[ ! -s $ARCHIVE ]] && curl -ksSL -o $ARCHIVE $DOWNLOAD_URL
 
 for n in 001 002 003
 do
   PATCH="readline70-$n"
   [[ ! -s "$ARCHIVES_DIR/$PATCH" ]] &&
-    curl -sSL  http://ftp.gnu.org/gnu/readline/readline-7.0-patches/$PATCH -o "$ARCHIVES_DIR/$PATCH"
+    curl -ksSL  http://ftp.gnu.org/gnu/readline/readline-7.0-patches/$PATCH -o "$ARCHIVES_DIR/$PATCH"
 done
 
 # build

@@ -7,7 +7,7 @@ TARGET=texinfo-6.5
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://ftp.gnu.org/gnu/texinfo/$TARGET.tar.gz
-[[ ! -s $ARCHIVE ]] && curl -sSL $DOWNLOAD_URL -o $ARCHIVE
+[[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 # build
 pushd $BUILD_DIR

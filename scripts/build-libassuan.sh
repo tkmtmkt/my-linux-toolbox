@@ -7,7 +7,7 @@ TARGET=libassuan-2.4.4
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2
 DOWNLOAD_URL=https://www.gnupg.org/ftp/gcrypt/libassuan/$TARGET.tar.bz2
-[[ ! -s $ARCHIVE ]] && curl -sSL $DOWNLOAD_URL -o $ARCHIVE
+[[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 # build
 pushd $BUILD_DIR

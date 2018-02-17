@@ -7,7 +7,7 @@ TARGET=libevent-2.1.8-stable
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=https://github.com/libevent/libevent/releases/download/release-2.1.8-stable/$TARGET.tar.gz
-[[ ! -s $ARCHIVE ]] && curl -sSL $DOWNLOAD_URL -o $ARCHIVE
+[[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 # build
 pushd $BUILD_DIR

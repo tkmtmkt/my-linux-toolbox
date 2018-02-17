@@ -7,7 +7,7 @@ TARGET=p7zip_16.02
 # download
 ARCHIVE=$ARCHIVES_DIR/${TARGET}_src_all.tar.bz2
 DOWNLOAD_URL=https://sourceforge.net/projects/p7zip/files/p7zip/16.02/${TARGET}_src_all.tar.bz2
-[[ ! -s $ARCHIVE ]] && curl -sSL -o $ARCHIVE $DOWNLOAD_URL
+[[ ! -s $ARCHIVE ]] && curl -ksSL -o $ARCHIVE $DOWNLOAD_URL
 
 # build
 pushd $BUILD_DIR

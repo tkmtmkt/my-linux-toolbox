@@ -9,11 +9,11 @@ TARGET=ruby-2.4.3
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=https://cache.ruby-lang.org/pub/ruby/2.4/$TARGET.tar.gz
 #DOWNLOAD_URL=https://cache.ruby-lang.org/pub/ruby/2.5/$TARGET.tar.gz
-[[ ! -s $ARCHIVE ]] && curl -sSL $DOWNLOAD_URL -o $ARCHIVE
+[[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 BUNDLER_GEM=bundler-1.16.1.gem
 [[ ! -s $ARCHIVES_DIR/$BUNDLER_GEM ]] &&
-  curl -sSL https://rubygems.org/downloads/$BUNDLER_GEM -o $ARCHIVES_DIR/$BUNDLER_GEM
+  curl -ksSL https://rubygems.org/downloads/$BUNDLER_GEM -o $ARCHIVES_DIR/$BUNDLER_GEM
 
 # build
 pushd $BUILD_DIR

@@ -7,7 +7,7 @@ TARGET=tmux-2.6
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=https://github.com/tmux/tmux/archive/2.6.tar.gz
-[[ ! -s $ARCHIVE ]] && curl -sSL $DOWNLOAD_URL -o $ARCHIVE
+[[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 # build
 pushd $BUILD_DIR
