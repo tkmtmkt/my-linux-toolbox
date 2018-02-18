@@ -18,7 +18,8 @@ pushd $TARGET
 ./configure --prefix=$PREFIX \
             --enable-shared \
             --with-doc-strings \
-            --with-system-expat &&
+            --with-system-expat \
+            --with-ensurepip=install &&
 make && make install &&
 ln -sf python3.6 $PREFIX/bin/python &&
 ln -sf pip3.6 $PREFIX/bin/pip
