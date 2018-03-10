@@ -15,7 +15,8 @@ pushd $BUILD_DIR
 tar zxf $ARCHIVE
 
 pushd $TARGET
-./configure --prefix=$PREFIX &&
+./configure --prefix=$PREFIX \
+            YACC=yacc &&
 make && make install
 RESULT=$?
 popd
