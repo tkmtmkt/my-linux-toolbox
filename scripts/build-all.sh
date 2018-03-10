@@ -45,6 +45,7 @@ global
 sqlite3
 nkf
 jq
+multitail
 
 ### gcc
 #gmp
