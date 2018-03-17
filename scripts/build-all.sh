@@ -46,6 +46,7 @@ sqlite3
 nkf
 jq
 multitail
+rlwrap
 
 ### gcc
 #gmp
