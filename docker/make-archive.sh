@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 
 case "$1" in
-  centos[67]|ubuntu1604)
+  centos[67]|ubuntu1[46]04)
     BASE_NAME=toolbox-$1
     PARENT_DIR=$SCRIPT_DIR/$1/opt
 
@@ -12,7 +12,7 @@ case "$1" in
         toolbox
     ;;
   *)
-    echo "Usage: $0 [centos6|centos7|ubuntu1604]"
+    echo "Usage: $0 [centos6|centos7|ubuntu1404|ubuntu1604]"
     exit 1
     ;;
 esac

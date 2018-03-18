@@ -18,6 +18,15 @@ services:
       - './centos7/opt/toolbox/:/opt/toolbox/:rw'
       - '../scripts/:/opt/toolbox/workspace/scripts/:rw'
       - '../archives/:/opt/toolbox/workspace/archives/:rw'
+  ubuntu1404:
+    build: ./ubuntu1404
+    hostname: ubuntu1404
+    tty: true
+    volumes:
+      - './ubuntu1404/home/:/home/:rw'
+      - './ubuntu1404/opt/toolbox/:/opt/toolbox/:rw'
+      - '../scripts/:/opt/toolbox/workspace/scripts/:rw'
+      - '../archives/:/opt/toolbox/workspace/archives/:rw'
   ubuntu1604:
     build: ./ubuntu1604
     hostname: ubuntu1604
