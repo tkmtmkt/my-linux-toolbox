@@ -5,24 +5,24 @@
 ----
 
 ```
-/usr/local
+/toolbox/
 ├─bin/
 ├─lib/
-└─toolbox/
+└─my-linux-toolbox/
     ├─archives/               ←tarballダウンロード先
     ├─build/                  ←tビルド作業ディレクトリ
     ├─docker/
-    │  ├─centos5/
-    │  │  ├─usr/local/toolbox/
-    │  │  └─Dockerfile
     │  ├─centos6/
-    │  │  ├─usr/local/toolbox/
+    │  │  ├─opt/toolbox/
     │  │  └─Dockerfile
     │  ├─centos7/
-    │  │  ├─usr/local/toolbox/
+    │  │  ├─opt/toolbox/
+    │  │  └─Dockerfile
+    │  ├─ubuntu1404/
+    │  │  ├─opt/toolbox/
     │  │  └─Dockerfile
     │  ├─ubuntu1604/
-    │  │  ├─usr/local/toolbox/
+    │  │  ├─opt/toolbox/
     │  │  └─Dockerfile
     │  └─docker-compose.yml
     ├─log/                    ←ビルド結果のログ出力
@@ -49,8 +49,8 @@ dockerでビルドとインストールを実行できるようにした。
 
 ```sh
 $ cd docker
-$ ./build.sh centos5
 $ ./build.sh centos6
 $ ./build.sh centos7
+$ ./build.sh ubuntu1404
 $ ./build.sh ubuntu1604
 ```
