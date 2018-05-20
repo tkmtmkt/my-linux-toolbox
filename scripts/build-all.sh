@@ -67,6 +67,7 @@ ntbtls
 gnupg
 
 ### util
+libxml2
 curl
 tar
 p7zip
