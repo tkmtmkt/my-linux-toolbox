@@ -15,7 +15,7 @@ pushd $BUILD_DIR
 tar zxf $ARCHIVE
 
 pushd $TARGET
-./configure --prefix=$PREFIX \
+./configure --prefix=$PREFIX_BUILDTOOL \
             --with-internal-glib \
             --disable-compile-warnings \
             --disable-host-tool &&

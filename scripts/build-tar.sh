@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=tar-1.29
+TARGET=tar-1.30
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz

@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=libgpg-error-1.27
+TARGET=libgpg-error-1.31
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2

@@ -15,7 +15,7 @@ pushd $BUILD_DIR
 tar zxf $ARCHIVE
 
 pushd $TARGET
-./configure --prefix=$PREFIX &&
+./configure --prefix=$PREFIX_BUILDTOOL &&
 make && make install
 RESULT=$?
 popd

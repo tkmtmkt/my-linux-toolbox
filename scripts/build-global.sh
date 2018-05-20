@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=global-6.5.7
+TARGET=global-6.6.2
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz

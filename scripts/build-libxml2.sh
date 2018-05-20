@@ -2,22 +2,24 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=libgcrypt-1.8.2
+TARGET=libxml2-2.9.8
 
 # download
-ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2
-DOWNLOAD_URL=https://www.gnupg.org/ftp/gcrypt/libgcrypt/$TARGET.tar.bz2
+ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
+DOWNLOAD_URL=http://xmlsoft.org/sources/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar jxf $ARCHIVE
+tar zxf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX \
-            --with-libgpg-error-prefix=$PREFIX \
-            --with-pth-prefix=$PREFIX &&
+            --with-history \
+            --with-python=$PREFIX/bin/python3 \
+            --with-icu \
+            --with-threads
 make && make install
 RESULT=$?
 popd

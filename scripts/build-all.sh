@@ -34,19 +34,7 @@ ncurses
 gettext
 readline
 expat
-
-### util
 openssl
-curl
-tar
-p7zip
-highway
-global
-sqlite3
-nkf
-jq
-multitail
-rlwrap
 
 ### gcc
 #gmp
@@ -77,4 +65,17 @@ libksba
 libassuan
 ntbtls
 gnupg
+
+### util
+libxml2
+curl
+tar
+p7zip
+global
+highway
+sqlite3
+multitail
+rlwrap
+nkf
+jq
 EOS

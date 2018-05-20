@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=libassuan-2.4.4
+TARGET=libassuan-2.5.1
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2

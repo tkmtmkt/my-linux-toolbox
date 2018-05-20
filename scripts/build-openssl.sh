@@ -2,11 +2,11 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=openssl-1.1.0g
+TARGET=OpenSSL_1_1_0h
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
-DOWNLOAD_URL=https://www.openssl.org/source/$TARGET.tar.gz
+DOWNLOAD_URL=https://github.com/openssl/openssl/archive/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -ksSL -o $ARCHIVE $DOWNLOAD_URL
 
 # build
@@ -16,7 +16,7 @@ tar zxf $ARCHIVE
 
 PERL=$PREFIX/bin/perl
 
-pushd $TARGET
+pushd openssl-$TARGET
 ./config zlib \
          --prefix=$PREFIX \
          --openssldir=$PREFIX/ssl \
