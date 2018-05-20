@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=gnupg-2.2.2
+TARGET=gnupg-2.2.7
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2
@@ -15,6 +15,7 @@ pushd $BUILD_DIR
 tar jxf $ARCHIVE
 
 pushd $TARGET
+export LDFLAGS="$LDFLAGS -lrt"
 ./configure --prefix=$PREFIX \
             ac_cv_func_inotify_init=no \
             --with-tar=$PREFIX/bin/tar \

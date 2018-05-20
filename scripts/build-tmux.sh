@@ -2,11 +2,11 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=tmux-2.6
+TARGET=tmux-2.7
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
-DOWNLOAD_URL=https://github.com/tmux/tmux/archive/2.6.tar.gz
+DOWNLOAD_URL=https://github.com/tmux/tmux/archive/2.7.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 # build

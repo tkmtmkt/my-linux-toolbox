@@ -2,11 +2,11 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=vim-8.0.1307
+TARGET=vim-8.1.0005
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
-DOWNLOAD_URL=https://github.com/vim/vim/archive/v8.0.1307.tar.gz
+DOWNLOAD_URL=https://github.com/vim/vim/archive/v8.1.0005.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 VIMDOC_JA=vimdoc-ja.tar.gz
