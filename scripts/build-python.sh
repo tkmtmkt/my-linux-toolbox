@@ -28,17 +28,4 @@ popd
 
 popd
 
-# python packages
-if [[ -d "$ARCHIVES_DIR/wheels" ]]
-then
-  pip install $(find $ARCHIVES_DIR/wheels -name pip-*)
-  pip install --no-deps --no-index -r $SCRIPT_DIR/requirements.txt -f $ARCHIVES_DIR/wheels
-else
-  pip install --upgrade pip
-  pip install -r $SCRIPT_DIR/requirements.in.txt
-  pip freeze > $SCRIPT_DIR/requirements.txt
-  pip wheel -r $SCRIPT_DIR/requirements.txt -w $ARCHIVES_DIR/wheels
-  pip wheel pip -w $ARCHIVES_DIR/wheels
-fi
-
 exit $RESULT

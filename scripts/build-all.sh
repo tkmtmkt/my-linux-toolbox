@@ -46,6 +46,7 @@ sqlite3
 
 ### language
 python
+python-packages
 ruby
 
 ### vim
