@@ -35,6 +35,8 @@ gettext
 readline
 expat
 openssl
+curl
+sqlite3
 
 ### gcc
 #gmp
@@ -44,6 +46,7 @@ openssl
 
 ### language
 python
+python-packages
 ruby
 
 ### vim
@@ -68,12 +71,10 @@ gnupg
 
 ### util
 libxml2
-curl
 tar
 p7zip
 global
 highway
-sqlite3
 multitail
 rlwrap
 nkf
