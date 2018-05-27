@@ -76,6 +76,7 @@ p7zip
 global
 highway
 multitail
+parallel
 rlwrap
 nkf
 jq
