@@ -16,6 +16,7 @@ tar zxf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX \
+            --disable-shared \
             --with-history \
             --with-python=$PREFIX/bin/python3 \
             --with-icu \

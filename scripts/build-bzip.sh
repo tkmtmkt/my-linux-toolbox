@@ -15,7 +15,10 @@ pushd $BUILD_DIR
 tar zxf $ARCHIVE
 
 pushd $TARGET
-make && make install PREFIX=$PREFIX
+sed -i "s|CFLAGS=|CFLAGS=-fPIC |g" Makefile &&
+make &&
+make -f Makefile-libbz2_so &&
+make install PREFIX=$PREFIX
 RESULT=$?
 popd
 

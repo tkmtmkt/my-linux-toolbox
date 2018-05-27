@@ -16,7 +16,7 @@ tar zxf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX \
-            --enable-shared \
+            --disable-shared \
             --with-doc-strings \
             --with-system-expat \
             --with-ensurepip=install &&
