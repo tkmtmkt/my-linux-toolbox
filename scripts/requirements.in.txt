@@ -8,13 +8,14 @@ paramiko
 pytest-xdist
 # sphinx
 Sphinx
-commonmark
 recommonmark
-sphinx_rtd_theme
 sphinxcontrib-blockdiag
 sphinxcontrib-seqdiag
 sphinxcontrib-actdiag
 sphinxcontrib-nwdiag
+sphinx_rtd_theme
+Flask-Sphinx-Themes
+sphinxjp.themes.bizstyle
 # other
 csvkit
 pandas
