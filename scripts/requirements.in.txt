@@ -1,10 +1,28 @@
+# base
 wheel
 ipython
-jupyter
+pipdeptree
+# util
+glob2
+path.py
+pathlib2
+pycodestyle
+pydocstyle
+pylint
+pycrypto
+colorama
+cytoolz
+nose
+# file format
+csvkit
+beautifulsoup4
+lxml
+XlsxWriter
+h5py
 # ansible
 ansible
 testinfra
-paramiko
+pyOpenSSL
 pytest-xdist
 # sphinx
 Sphinx
@@ -13,9 +31,17 @@ sphinxcontrib-blockdiag
 sphinxcontrib-seqdiag
 sphinxcontrib-actdiag
 sphinxcontrib-nwdiag
-sphinx_rtd_theme
+sphinx-rtd-theme
 Flask-Sphinx-Themes
 sphinxjp.themes.bizstyle
 # other
-csvkit
+cx_Oracle
+jupyter
 pandas
+odo
+dask
+matplotlib
+imageio
+bokeh
+bkcharts
+# vim: set ft=sh:
