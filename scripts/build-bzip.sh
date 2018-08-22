@@ -6,7 +6,7 @@ TARGET=bzip2-1.0.6
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
-DOWNLOAD_URL=http://www.bzip.org/1.0.6/$TARGET.tar.gz
+DOWNLOAD_URL=https://fossies.org/linux/misc/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 # build
