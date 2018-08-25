@@ -8,6 +8,7 @@ export PREFIX_BUILDTOOL=$PREFIX/buildtool
 export PATH=$PREFIX_BUILDTOOL/bin:$PREFIX/bin:$PATH
 export PKG_CONFIG=$PREFIX_BUILDTOOL/bin/pkg-config
 export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
+export CCSHARED="-fPIC"
 export CFLAGS="-I$PREFIX/include"
 export CPPFLAGS="-I$PREFIX/include"
 export LDFLAGS="-L$PREFIX/lib -Wl,-rpath,$PREFIX/lib"

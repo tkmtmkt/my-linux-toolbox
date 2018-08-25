@@ -45,6 +45,7 @@ sqlite3
 #gcc
 
 ### language
+lua
 python
 python-packages
 ruby
@@ -76,6 +77,7 @@ p7zip
 global
 highway
 multitail
+parallel
 rlwrap
 nkf
 jq

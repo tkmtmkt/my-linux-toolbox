@@ -25,8 +25,12 @@ cp -p vimdoc-ja-master/syntax/* runtime/syntax/ &&
 
 ./configure --prefix=$PREFIX \
             --enable-fail-if-missing \
-            --enable-python3interp=yes \
+            --enable-luainterp=yes \
+            --enable-perlinterp=dynamic \
+            --enable-python3interp=dynamic \
+            --enable-rubyinterp=dynamic \
             --enable-multibyte \
+            --with-lua-prefix=$PREFIX \
             --with-features=huge &&
 make && make install &&
 ln -sf vim $PREFIX/bin/vi

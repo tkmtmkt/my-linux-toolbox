@@ -2,23 +2,21 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=bzip2-1.0.6
+TARGET=parallel-20180522
 
 # download
-ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
-DOWNLOAD_URL=https://fossies.org/linux/misc/$TARGET.tar.gz
+ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2
+DOWNLOAD_URL=http://ftp.gnu.org/gnu/parallel/$TARGET.tar.bz2
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar jxf $ARCHIVE
 
 pushd $TARGET
-sed -i "s|CFLAGS=|CFLAGS=-fPIC |g" Makefile &&
-make &&
-make -f Makefile-libbz2_so &&
-make install PREFIX=$PREFIX
+./configure --prefix=$PREFIX &&
+make && make install
 RESULT=$?
 popd
 
