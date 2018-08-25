@@ -45,6 +45,7 @@ sqlite3
 #gcc
 
 ### language
+lua
 python
 python-packages
 ruby
