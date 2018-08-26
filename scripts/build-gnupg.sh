@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=gnupg-2.2.7
+TARGET=gnupg-2.2.9
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2

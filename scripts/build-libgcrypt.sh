@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=libgcrypt-1.8.2
+TARGET=libgcrypt-1.8.3
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2
