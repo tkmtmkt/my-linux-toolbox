@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=parallel-20180522
+TARGET=parallel-20180822
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2
