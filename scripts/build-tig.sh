@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=tig-2.3.3
+TARGET=tig-2.4.1
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
