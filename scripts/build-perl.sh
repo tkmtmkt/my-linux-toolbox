@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=perl-5.26.2
+TARGET=perl-5.28.0
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
