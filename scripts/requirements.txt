@@ -94,7 +94,7 @@ pluggy==0.7.1
 prometheus-client==0.3.1
 prompt-toolkit==1.0.15
 ptyprocess==0.6.0
-py==1.5.4
+py==1.6.0
 pyasn1==0.4.4
 pycodestyle==2.4.0
 pycparser==2.18
@@ -105,7 +105,7 @@ pylint==2.1.1
 PyNaCl==1.2.1
 pyOpenSSL==18.0.0
 pyparsing==2.2.0
-pytest==3.7.2
+pytest==3.7.3
 pytest-forked==0.2
 pytest-xdist==1.23.0
 python-dateutil==2.7.3
@@ -122,7 +122,7 @@ seqdiag==0.9.6
 simplegeneric==0.8.1
 six==1.11.0
 snowballstemmer==1.2.1
-Sphinx==1.7.7
+Sphinx==1.7.8
 sphinx-rtd-theme==0.4.1
 sphinxcontrib-actdiag==0.8.5
 sphinxcontrib-blockdiag==1.5.5
@@ -137,7 +137,6 @@ testpath==0.3.1
 toolz==0.9.0
 tornado==5.1
 traitlets==4.3.2
-typed-ast==1.1.0
 Unidecode==1.0.22
 urllib3==1.23
 wcwidth==0.1.7
@@ -146,4 +145,4 @@ webencodings==0.5.1
 widgetsnbextension==3.4.0
 wrapt==1.10.11
 xlrd==1.1.0
-XlsxWriter==1.0.7
+XlsxWriter==1.0.9
