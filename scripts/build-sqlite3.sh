@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=sqlite-autoconf-3230100
+TARGET=sqlite-autoconf-3240000
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz

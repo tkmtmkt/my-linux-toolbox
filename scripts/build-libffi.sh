@@ -1,23 +1,22 @@
 #!/bin/bash
+# https://sourceware.org/libffi/
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=libgcrypt-1.8.3
+TARGET=libffi-3.2.1
 
 # download
-ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2
-DOWNLOAD_URL=https://www.gnupg.org/ftp/gcrypt/libgcrypt/$TARGET.tar.bz2
+ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
+DOWNLOAD_URL=https://sourceware.org/ftp/libffi/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar jxf $ARCHIVE
+tar zxf $ARCHIVE
 
 pushd $TARGET
-./configure --prefix=$PREFIX \
-            --with-libgpg-error-prefix=$PREFIX \
-            --with-pth-prefix=$PREFIX &&
+./configure --prefix=$PREFIX &&
 make && make install
 RESULT=$?
 popd

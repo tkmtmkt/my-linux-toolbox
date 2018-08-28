@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=npth-1.5
+TARGET=npth-1.6
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2

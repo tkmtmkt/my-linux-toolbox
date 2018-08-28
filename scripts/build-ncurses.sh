@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=ncurses-6.0
+TARGET=ncurses-6.1
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz

@@ -2,11 +2,11 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=git-2.17.0
+TARGET=git-2.18.0
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
-DOWNLOAD_URL=https://github.com/git/git/archive/v2.17.0.tar.gz
+DOWNLOAD_URL=https://github.com/git/git/archive/v2.18.0.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 # build

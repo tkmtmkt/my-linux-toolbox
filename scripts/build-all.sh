@@ -37,6 +37,7 @@ expat
 openssl
 curl
 sqlite3
+libffi
 
 ### gcc
 #gmp

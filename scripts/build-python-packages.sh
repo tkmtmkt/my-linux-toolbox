@@ -3,7 +3,7 @@ SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
 # python packages
-if [[ -d "$ARCHIVES_DIR/wheels" ]]
+if [[ "$OFFLINE" = "yes" ]]
 then
   # offline install (pip & wheel)
   pip install --no-deps --no-index $(find $ARCHIVES_DIR/wheels -name pip-* -o -name wheel-*)
