@@ -45,6 +45,10 @@ libffi
 #mpc
 #gcc
 
+### git
+git
+tig
+
 ### language
 lua
 python
@@ -53,10 +57,6 @@ ruby
 
 ### vim
 vim
-
-### git
-git
-tig
 
 ### tmux
 libevent

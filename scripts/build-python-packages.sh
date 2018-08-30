@@ -10,9 +10,6 @@ then
 
   # offline install (other)
   pip3 install --no-deps --no-index -r $SCRIPT_DIR/requirements.txt -f $ARCHIVES_DIR/wheels
-
-  # TODO: Provisional action until supervisor version 4 is released.
-  pip3 install --no-deps --no-index -f $(find ARCHIVES_DIR/wheels -name supervisor-*)
 else
   # online install (pip & wheel)
   pip3 install --upgrade pip wheel
@@ -27,6 +24,8 @@ else
 
   # TODO: Provisional action until supervisor version 4 is released.
   pip3 install git+https://github.com/Supervisor/supervisor
+  pip3 wheel   git+https://github.com/Supervisor/supervisor -w $ARCHIVES_DIR/wheels
+  pip3 freeze > $SCRIPT_DIR/requirements.txt
   # make wheel
   # git clone https://github.com/Supervisor/supervisor.git
   # cd supervisor
