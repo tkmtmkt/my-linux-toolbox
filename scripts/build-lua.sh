@@ -16,7 +16,9 @@ tar zxf $ARCHIVE
 
 pushd $TARGET
 sed -i "s|INSTALL_TOP=.*|INSTALL_TOP= $PREFIX|g" Makefile
-make linux INSTALL_TOP=$PREFIX MYLDFLAGS="-L$PREFIX/lib" MYLIBS="-lncursesw" &&
+sed -i "s|MYLDFLAGS=.*|MYLDFLAGS= -L$PREFIX/lib -Wl,-rpath,$PREFIX/lib|g" src/Makefile
+sed -i "s|MYLIBS=.*|MYLIBS= -lncursesw|g" src/Makefile
+make linux &&
 make install
 RESULT=$?
 popd
