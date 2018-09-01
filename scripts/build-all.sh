@@ -25,6 +25,7 @@ perl
 m4
 autoconf
 automake
+texinfo
 
 ### library
 zlib
@@ -82,4 +83,5 @@ parallel
 rlwrap
 nkf
 jq
+bc
 EOS

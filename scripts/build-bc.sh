@@ -15,6 +15,7 @@ pushd $BUILD_DIR
 tar zxf $ARCHIVE
 
 pushd $TARGET
+sed -i "s/^ed /vim -e /g" bc/fix-libmath_h
 ./configure --prefix=$PREFIX \
             --with-readline &&
 make && make install
