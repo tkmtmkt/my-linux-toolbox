@@ -39,8 +39,6 @@ openssl
 curl
 sqlite3
 libffi
-proj4
-geos
 
 ### gcc
 #gmp
@@ -55,7 +53,6 @@ tig
 ### language
 lua
 python
-python-packages
 ruby
 
 ### vim
@@ -86,4 +83,9 @@ rlwrap
 nkf
 jq
 bc
+
+### python-packages
+proj4
+geos
+python-packages
 EOS
