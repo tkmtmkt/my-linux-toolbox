@@ -39,6 +39,8 @@ openssl
 curl
 sqlite3
 libffi
+proj4
+geos
 
 ### gcc
 #gmp

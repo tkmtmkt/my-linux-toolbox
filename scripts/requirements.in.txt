@@ -46,6 +46,8 @@ APLpy                       # The Astronomical Plotting Library in Python
 pyephem                     # Compute positions of the planets and stars
 # plot
 matplotlib                  # Python plotting package
+#Cartopy                     # A cartographic python library with Matplotlib support for visualisation
+#Shapely                     # Geometric objects, predicates, and operations
 bokeh                       # Interactive plots and applications in the browser from Python
 bkcharts                    # High level chart types built on top of Bokeh
 # other
