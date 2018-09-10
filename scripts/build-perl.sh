@@ -12,7 +12,7 @@ DOWNLOAD_URL=http://www.cpan.org/src/5.0/$TARGET.tar.gz
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 ./configure.gnu --prefix=$PREFIX &&

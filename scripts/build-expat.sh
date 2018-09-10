@@ -12,7 +12,7 @@ DOWNLOAD_URL=https://sourceforge.net/projects/expat/files/expat/2.2.5/$TARGET.ta
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar jxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX &&

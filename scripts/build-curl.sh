@@ -15,7 +15,7 @@ CA_CERT=$ARCHIVES_DIR/cacert.pem
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 CA_PATH=$PREFIX/ssl/certs
 CA_BUNDLE=$CA_PATH/ca-bundle.crt

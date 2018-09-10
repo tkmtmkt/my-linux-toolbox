@@ -12,7 +12,7 @@ DOWNLOAD_URL=http://pkg-config.freedesktop.org/releases/$TARGET.tar.gz
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX_BUILDTOOL \

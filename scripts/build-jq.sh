@@ -12,7 +12,7 @@ DOWNLOAD_URL=https://github.com/stedolan/jq/releases/download/$TARGET/$TARGET.ta
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX \

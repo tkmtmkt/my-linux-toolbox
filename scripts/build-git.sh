@@ -12,7 +12,7 @@ DOWNLOAD_URL=https://github.com/git/git/archive/v2.18.0.tar.gz
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 make configure

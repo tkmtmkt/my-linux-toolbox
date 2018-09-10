@@ -19,7 +19,7 @@ done
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 for n in 001 002 003

@@ -12,7 +12,7 @@ DOWNLOAD_URL=http://ftp.gnu.org/gnu/texinfo/$TARGET.tar.gz
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX_BUILDTOOL &&

@@ -12,7 +12,7 @@ DOWNLOAD_URL=https://sourceforge.net/projects/p7zip/files/p7zip/16.02/${TARGET}_
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar jxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 sed -i "s|/usr/local|$PREFIX|g" makefile.common &&

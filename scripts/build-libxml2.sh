@@ -12,7 +12,7 @@ DOWNLOAD_URL=http://xmlsoft.org/sources/$TARGET.tar.gz
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX \

@@ -12,7 +12,7 @@ DOWNLOAD_URL=https://github.com/tkengo/highway/archive/v1.1.0.tar.gz
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 mkdir -p config

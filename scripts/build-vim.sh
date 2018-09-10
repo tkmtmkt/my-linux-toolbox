@@ -16,10 +16,10 @@ VIMDOC_JA=vimdoc-ja.tar.gz
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
-tar xzf "$ARCHIVES_DIR/$VIMDOC_JA" &&
+tar xf "$ARCHIVES_DIR/$VIMDOC_JA" &&
 cp -p vimdoc-ja-master/doc/* runtime/doc/ &&
 cp -p vimdoc-ja-master/syntax/* runtime/syntax/ &&
 

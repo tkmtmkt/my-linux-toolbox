@@ -12,7 +12,7 @@ DOWNLOAD_URL=https://github.com/libevent/libevent/releases/download/release-2.1.
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX &&

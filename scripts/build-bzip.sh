@@ -12,7 +12,7 @@ DOWNLOAD_URL=https://fossies.org/linux/misc/$TARGET.tar.gz
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 sed -i "s|CFLAGS=|CFLAGS=-fPIC |g" Makefile &&

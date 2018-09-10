@@ -12,7 +12,7 @@ DOWNLOAD_URL=https://github.com/jonas/tig/releases/download/$TARGET/$TARGET.tar.
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX \

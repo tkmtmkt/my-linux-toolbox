@@ -12,7 +12,7 @@ DOWNLOAD_URL=ftp://gcc.gnu.org/pub/gcc/infrastructure/$TARGET.tar.bz2
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar xjf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX &&

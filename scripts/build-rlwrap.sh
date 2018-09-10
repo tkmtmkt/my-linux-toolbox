@@ -16,7 +16,7 @@ RLWRAP_EXT=rlwrap-extensions-V12-0.05.tar.gz
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar xzf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX &&
@@ -29,7 +29,7 @@ popd
 # completions for Oracle
 if [[ $RESULT -eq 0 ]]; then
   pushd $PREFIX/share/rlwrap/completions
-  tar xzf "$ARCHIVES_DIR/$RLWRAP_EXT"
+  tar xf "$ARCHIVES_DIR/$RLWRAP_EXT"
   for CMD in asm+ sql+
   do
     sed -i "s|/usr/local|$PREFIX|g" $CMD

@@ -12,7 +12,7 @@ DOWNLOAD_URL=https://github.com/openssl/openssl/archive/$TARGET.tar.gz
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 PERL=$PREFIX/bin/perl
 

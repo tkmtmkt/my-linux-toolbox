@@ -12,7 +12,7 @@ DOWNLOAD_URL=https://www.vanheusden.com/multitail/$TARGET.tgz
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 sed -i "s|DESTDIR=|DESTDIR=$PREFIX|g" Makefile &&

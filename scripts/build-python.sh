@@ -12,7 +12,7 @@ DOWNLOAD_URL=https://www.python.org/ftp/python/3.7.0/$TARGET.tgz
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX \

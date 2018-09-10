@@ -12,7 +12,7 @@ DOWNLOAD_URL=http://ftp.gnu.org/gnu/bc/$TARGET.tar.gz
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 sed -i "s/^ed /vim -e /g" bc/fix-libmath_h
