@@ -24,14 +24,17 @@ cp -p vimdoc-ja-master/doc/* runtime/doc/ &&
 cp -p vimdoc-ja-master/syntax/* runtime/syntax/ &&
 
 ./configure --prefix=$PREFIX \
+            --with-features=huge \
             --enable-fail-if-missing \
-            --enable-luainterp=yes \
-            --enable-perlinterp=dynamic \
-            --enable-python3interp=dynamic \
-            --enable-rubyinterp=dynamic \
             --enable-multibyte \
+            --enable-luainterp \
             --with-lua-prefix=$PREFIX \
-            --with-features=huge &&
+            --enable-perlinterp \
+            --enable-python3interp \
+            --enable-rubyinterp \
+            --enable-gpm \
+            --enable-cscope \
+            --enable-fontset &&
 make && make install &&
 ln -sf vim $PREFIX/bin/vi
 RESULT=$?
