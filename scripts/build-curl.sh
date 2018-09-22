@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=curl-7.56.1
+TARGET=curl-7.61.1
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
@@ -25,7 +25,7 @@ pushd $TARGET
 ./configure --prefix=$PREFIX \
             --disable-manual \
             --enable-libcurl-option \
-            --with-ssl=$PREFIX/ssl \
+            --with-ssl=$PREFIX \
             --with-ca-path=$CA_PATH \
             --with-ca-bundle=$CA_BUNDLE &&
 make && make install
