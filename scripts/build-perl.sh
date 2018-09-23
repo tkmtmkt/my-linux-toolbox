@@ -15,7 +15,7 @@ pushd $BUILD_DIR
 tar xf $ARCHIVE
 
 pushd $TARGET
-./configure.gnu --prefix=$PREFIX &&
+./Configure -des -Dprefix=$PREFIX &&
 make && make install
 RESULT=$?
 popd
