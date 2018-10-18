@@ -34,7 +34,6 @@ sphinxcontrib-actdiag       # Sphinx "actdiag" extension
 sphinxcontrib-nwdiag        # Sphinx "nwdiag" extension
 sphinx-rtd-theme            # Read the Docs theme for Sphinx
 Flask-Sphinx-Themes         # Sphinx themes for Flask and related projects.
-sphinxjp.themes.bizstyle    # A sphinx theme for Business style Documentation.
 # calc
 numpy                       # NumPy: array processing for numbers, strings, records, and objects.
 scipy                       # SciPy: Scientific Library for Python
