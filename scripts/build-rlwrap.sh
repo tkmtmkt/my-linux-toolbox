@@ -38,4 +38,5 @@ if [[ $RESULT -eq 0 ]]; then
   popd
 fi
 
+log $TARGET
 exit $RESULT

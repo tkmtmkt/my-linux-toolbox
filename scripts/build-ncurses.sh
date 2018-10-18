@@ -39,4 +39,5 @@ popd
 
 popd
 
+log $TARGET
 exit $RESULT

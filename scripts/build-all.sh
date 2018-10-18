@@ -1,10 +1,13 @@
 #!/bin/bash
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
+source $SCRIPT_DIR/build-common.sh
+
 BASE_DIR=$(cd $SCRIPT_DIR/..;pwd)
 LOG_DIR=$BASE_DIR/log
 
 [[ ! -d "$LOG_DIR" ]] && mkdir $LOG_DIR
 
+log "build-all at $(uname -a)"
 while read PKG
 do
   [[ $(echo $PKG | grep -e "^#") ]] && continue
