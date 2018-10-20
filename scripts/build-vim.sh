@@ -2,23 +2,26 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=vim-8.1.0327
+VERSION=8.1.0327
+TARGET=vim-$VERSION
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
-DOWNLOAD_URL=https://github.com/vim/vim/archive/v8.1.0327.tar.gz
+DOWNLOAD_URL=https://github.com/vim/vim/archive/v$VERSION.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 VIMDOC_JA=vimdoc-ja.tar.gz
 [[ ! -s "$ARCHIVES_DIR/$VIMDOC_JA" ]] &&
   curl -ksSL https://github.com/vim-jp/vimdoc-ja/archive/master.tar.gz -o "$ARCHIVES_DIR/$VIMDOC_JA"
 
-# build
 pushd $BUILD_DIR
+
+# expand
 [[ -d $TARGET ]] && rm -rf $TARGET
 tar xf $ARCHIVE
+cd $TARGET
 
-pushd $TARGET
+# build
 tar xf "$ARCHIVES_DIR/$VIMDOC_JA" &&
 cp -p vimdoc-ja-master/doc/* runtime/doc/ &&
 cp -p vimdoc-ja-master/syntax/* runtime/syntax/ &&
@@ -38,7 +41,6 @@ cp -p vimdoc-ja-master/syntax/* runtime/syntax/ &&
 make && make install &&
 ln -sf vim $PREFIX/bin/vi
 RESULT=$?
-popd
 
 popd
 

@@ -2,20 +2,23 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=ncurses-6.1
+VERSION=6.1
+TARGET=ncurses-$VERSION
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://ftp.gnu.org/gnu/ncurses/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
-# build
-export CPPFLAGS="-P"
 pushd $BUILD_DIR
+
+# expand
 [[ -d $TARGET ]] && rm -rf $TARGET
 tar xf $ARCHIVE
+cd $TARGET
 
-pushd $TARGET
+# build
+export CPPFLAGS="-P"
 ./configure --prefix=$PREFIX \
             --with-pkg-config=$PREFIX/bin/pkg-config \
             --with-pkg-config-libdir=$PREFIX/lib/pkgconfig \
@@ -35,7 +38,6 @@ do
   ln -sf lib${lib}w.pc   $PREFIX/lib/pkgconfig/${lib}.pc
 done
 RESULT=$?
-popd
 
 popd
 

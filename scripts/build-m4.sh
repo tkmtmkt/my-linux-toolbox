@@ -2,23 +2,25 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=m4-1.4.18
+VERSION=1.4.18
+TARGET=m4-$VERSION
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://ftp.gnu.org/gnu/m4/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
-# build
 pushd $BUILD_DIR
+
+# expand
 [[ -d $TARGET ]] && rm -rf $TARGET
 tar xf $ARCHIVE
+cd $TARGET
 
-pushd $TARGET
+# build
 ./configure --prefix=$PREFIX_BUILDTOOL &&
 make && make install
 RESULT=$?
-popd
 
 popd
 

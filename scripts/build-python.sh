@@ -2,19 +2,22 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=Python-3.7.0
+VERSION=3.7.0
+TARGET=Python-$VERSION
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tgz
-DOWNLOAD_URL=https://www.python.org/ftp/python/3.7.0/$TARGET.tgz
+DOWNLOAD_URL=https://www.python.org/ftp/python/$VERSION/$TARGET.tgz
 [[ ! -s $ARCHIVE ]] && curl -ksSL -o $ARCHIVE $DOWNLOAD_URL
 
-# build
 pushd $BUILD_DIR
+
+# expand
 [[ -d $TARGET ]] && rm -rf $TARGET
 tar xf $ARCHIVE
+cd $TARGET
 
-pushd $TARGET
+# build
 ./configure --prefix=$PREFIX \
             --disable-shared \
             --with-doc-strings \
@@ -24,7 +27,6 @@ pushd $TARGET
 make && make install &&
 ln -sf python3 $PREFIX/bin/python &&
 RESULT=$?
-popd
 
 popd
 

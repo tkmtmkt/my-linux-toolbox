@@ -2,7 +2,8 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=readline-7.0
+VERSION=7.0
+TARGET=readline-$VERSION
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
@@ -16,12 +17,14 @@ do
     curl -ksSL  http://ftp.gnu.org/gnu/readline/readline-7.0-patches/$PATCH -o "$ARCHIVES_DIR/$PATCH"
 done
 
-# build
 pushd $BUILD_DIR
+
+# expand
 [[ -d $TARGET ]] && rm -rf $TARGET
 tar xf $ARCHIVE
+cd $TARGET
 
-pushd $TARGET
+# build
 for n in 001 002 003
 do
   patch -p0 < $ARCHIVES_DIR/readline70-$n
@@ -30,7 +33,6 @@ done &&
             --enable-multibyte &&
 make && make install
 RESULT=$?
-popd
 
 popd
 

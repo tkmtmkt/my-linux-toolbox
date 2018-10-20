@@ -2,19 +2,22 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=gnupg-2.2.9
+VERSION=2.2.9
+TARGET=gnupg-$VERSION
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2
 DOWNLOAD_URL=https://www.gnupg.org/ftp/gcrypt/gnupg/$TARGET.tar.bz2
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
-# build
 pushd $BUILD_DIR
+
+# expand
 [[ -d $TARGET ]] && rm -rf $TARGET
 tar xf $ARCHIVE
+cd $TARGET
 
-pushd $TARGET
+# build
 export LDFLAGS="$LDFLAGS -lrt"
 ./configure --prefix=$PREFIX \
             ac_cv_func_inotify_init=no \
@@ -29,7 +32,6 @@ export LDFLAGS="$LDFLAGS -lrt"
             --with-bzip2=$PREFIX &&
 make && make install
 RESULT=$?
-popd
 
 popd
 
