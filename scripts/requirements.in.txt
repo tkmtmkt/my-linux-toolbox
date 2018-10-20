@@ -22,7 +22,7 @@ XlsxWriter                  # A Python module for creating Excel XLSX files.
 h5py                        # Read and write HDF5 files from Python
 # ansible
 ansible                     # Radically simple IT automation
-testinfra                   # Test infrastructures
+testinfra==1.16.0           # Test infrastructures
 pyOpenSSL                   # Python wrapper module around the OpenSSL library
 pytest-xdist                # pytest xdist plugin for distributed testing and loop-on-failing modes
 # sphinx

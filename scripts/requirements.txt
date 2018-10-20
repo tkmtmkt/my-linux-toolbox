@@ -9,7 +9,7 @@ apipkg==1.5
 APLpy==1.1.1
 asn1crypto==0.24.0
 astroid==2.0.4
-astropy==3.0.4
+astropy==3.0.5
 atomicwrites==1.2.1
 attrs==18.2.0
 Babel==2.6.0
@@ -84,7 +84,7 @@ notebook==5.7.0
 numpy==1.15.2
 nwdiag==1.0.4
 odo==0.5.0
-openpyxl==2.5.8
+openpyxl==2.5.9
 packaging==18.0
 pandas==0.23.4
 pandocfilters==1.4.2
@@ -126,7 +126,7 @@ PyYAML==3.13
 pyzmq==17.1.2
 qtconsole==4.4.2
 recommonmark==0.4.0
-requests==2.19.1
+requests==2.20.0
 scikit-image==0.14.1
 scikit-learn==0.20.0
 scipy==1.1.0
@@ -152,11 +152,11 @@ toolz==0.9.0
 tornado==5.1.1
 traitlets==4.3.2
 Unidecode==1.0.22
-urllib3==1.23
+urllib3==1.24
 wcwidth==0.1.7
 webcolors==1.8.1
 webencodings==0.5.1
 widgetsnbextension==3.4.2
 wrapt==1.10.11
 xlrd==1.1.0
-XlsxWriter==1.1.1
+XlsxWriter==1.1.2
