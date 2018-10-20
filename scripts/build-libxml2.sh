@@ -23,7 +23,7 @@ cd $TARGET
             --with-history \
             --with-python=$PREFIX/bin/python3 \
             --with-icu \
-            --with-threads
+            --with-threads &&
 make && make install
 RESULT=$?
 
