@@ -6,8 +6,8 @@ VERSION=7.61.1
 TARGET=curl-$VERSION
 
 # download
-ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
-DOWNLOAD_URL=https://curl.haxx.se/download/$TARGET.tar.gz
+ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.xz
+DOWNLOAD_URL=https://curl.haxx.se/download/$TARGET.tar.xz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 CA_CERT=$ARCHIVES_DIR/cacert.pem

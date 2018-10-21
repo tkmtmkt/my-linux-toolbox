@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-VERSION=2.2.5
+VERSION=2.2.6
 TARGET=expat-$VERSION
 
 # download

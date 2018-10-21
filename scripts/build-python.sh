@@ -2,12 +2,12 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-VERSION=3.7.0
+VERSION=3.7.1
 TARGET=Python-$VERSION
 
 # download
-ARCHIVE=$ARCHIVES_DIR/$TARGET.tgz
-DOWNLOAD_URL=https://www.python.org/ftp/python/$VERSION/$TARGET.tgz
+ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.xz
+DOWNLOAD_URL=https://www.python.org/ftp/python/$VERSION/$TARGET.tar.xz
 [[ ! -s $ARCHIVE ]] && curl -ksSL -o $ARCHIVE $DOWNLOAD_URL
 
 pushd $BUILD_DIR
