@@ -95,6 +95,7 @@ rlwrap
 nkf
 jq
 bc
+ssh-chat
 
 ### python-packages
 proj4
