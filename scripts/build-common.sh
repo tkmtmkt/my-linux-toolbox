@@ -24,5 +24,5 @@ export BUILD_DIR=$BASE_DIR/build
 
 function log {
   [[ ! -d "$PREFIX" ]] && mkdir $PREFIX
-  echo "$(TZ='Asia/Tokyo' date -Iminutes) $1" >> $PREFIX/BUILD
+  echo "$(TZ='Asia/Tokyo' date -Iminutes) $1" >> $PREFIX/BUILDLOG
 }

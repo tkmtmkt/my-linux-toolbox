@@ -2,6 +2,8 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
+TARGET=python-packages
+
 WHEELS_DIR=$ARCHIVES_DIR/wheels
 
 pushd $BUILD_DIR
@@ -34,12 +36,11 @@ else
   pip3 wheel -w $WHEELS_DIR meld3 &&
   # make wheel of Supervisor
   # refs:  https://stackoverflow.com/questions/19796883/supervisord-for-python-3
-  TARGET=$BUILD_DIR/supervisor &&
   if [[ -d $TARGET ]]; then rm -rf $TARGET; fi &&
-  git clone https://github.com/Supervisor/supervisor.git $TARGET &&
-  cd $TARGET &&
+  git clone https://github.com/Supervisor/supervisor.git $TARGET/supervisor &&
+  cd $TARGET/supervisor &&
   python setup.py bdist_wheel &&
-  cp -p $TARGET/dist/supervisor-*.whl $WHEELS_DIR
+  cp -p ./dist/supervisor-*.whl $WHEELS_DIR
 fi
 RESULT=$?
 
