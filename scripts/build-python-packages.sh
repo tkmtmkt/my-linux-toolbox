@@ -31,7 +31,8 @@ else
   # TODO: Provisional action until supervisor version 4 is released.
   pip3 install git+https://github.com/Supervisor/supervisor &&
   pip3 freeze > $SCRIPT_DIR/requirements.txt &&
-  # make wheel
+  pip3 wheel -w $WHEELS_DIR meld3 &&
+  # make wheel of Supervisor
   # refs:  https://stackoverflow.com/questions/19796883/supervisord-for-python-3
   TARGET=$BUILD_DIR/supervisor &&
   if [[ -d $TARGET ]]; then rm -rf $TARGET; fi &&
