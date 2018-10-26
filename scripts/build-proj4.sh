@@ -2,12 +2,12 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-VERSION=1.6
-TARGET=npth-$VERSION
+VERSION=5.1.0
+TARGET=proj-$VERSION
 
 # download
-ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2
-DOWNLOAD_URL=https://gnupg.org/ftp/gcrypt/npth/$TARGET.tar.bz2
+ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
+DOWNLOAD_URL=https://github.com/OSGeo/proj.4/releases/download/$VERSION/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 pushd $BUILD_DIR

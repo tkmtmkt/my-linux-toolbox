@@ -2,19 +2,22 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=gcc-7.3.0
+VERSION=7.3.0
+TARGET=gcc-$VERSION
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.xz
 DOWNLOAD_URL=http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/$TARGET/$TARGET.tar.xz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
-# build
 pushd $BUILD_DIR
-[[ -d $TARGET ]] && rm -rf $TARGET
-tar xJf $ARCHIVE
 
-pushd $TARGET
+# expand
+[[ -d $TARGET ]] && rm -rf $TARGET
+tar xf $ARCHIVE
+cd $TARGET
+
+# build
 ./configure --prefix=$PREFIX \
             --enable-languages=c,c++ \
             --disable-bootstrap \
@@ -24,8 +27,8 @@ pushd $TARGET
             --with-mpc  &&
 make && make install
 RESULT=$?
-popd
 
 popd
 
+log $TARGET
 exit $RESULT

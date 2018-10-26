@@ -2,24 +2,27 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=automake-1.15.1
+VERSION=1.16.1
+TARGET=automake-$VERSION
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=http://ftp.gnu.org/gnu/automake/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
-# build
 pushd $BUILD_DIR
-[[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
 
-pushd $TARGET
+# expand
+[[ -d $TARGET ]] && rm -rf $TARGET
+tar xf $ARCHIVE
+cd $TARGET
+
+# build
 ./configure --prefix=$PREFIX_BUILDTOOL &&
 make && make install
 RESULT=$?
-popd
 
 popd
 
+log $TARGET
 exit $RESULT

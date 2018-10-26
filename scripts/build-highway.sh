@@ -2,19 +2,22 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=highway-1.1.0
+VERSION=1.1.0
+TARGET=highway-$VERSION
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
-DOWNLOAD_URL=https://github.com/tkengo/highway/archive/v1.1.0.tar.gz
+DOWNLOAD_URL=https://github.com/tkengo/highway/archive/v$VERSION.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
-# build
 pushd $BUILD_DIR
-[[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
 
-pushd $TARGET
+# expand
+[[ -d $TARGET ]] && rm -rf $TARGET
+tar xf $ARCHIVE
+cd $TARGET
+
+# build
 mkdir -p config
 aclocal &&
 autoconf &&
@@ -23,8 +26,8 @@ automake --add-missing &&
 ./configure --prefix=$PREFIX &&
 make && make install
 RESULT=$?
-popd
 
 popd
 
+log $TARGET
 exit $RESULT

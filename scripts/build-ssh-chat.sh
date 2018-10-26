@@ -2,12 +2,12 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-VERSION=1.6
-TARGET=npth-$VERSION
+VERSION=1.7
+TARGET=ssh-chat
 
 # download
-ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2
-DOWNLOAD_URL=https://gnupg.org/ftp/gcrypt/npth/$TARGET.tar.bz2
+ARCHIVE=$ARCHIVES_DIR/$TARGET-$VERSION.tar.gz
+DOWNLOAD_URL=https://github.com/shazow/ssh-chat/releases/download/v$VERSION/${TARGET}-linux_amd64.tgz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 pushd $BUILD_DIR
@@ -18,8 +18,7 @@ tar xf $ARCHIVE
 cd $TARGET
 
 # build
-./configure --prefix=$PREFIX &&
-make && make install
+cp ./ssh-chat $PREFIX/bin/
 RESULT=$?
 
 popd

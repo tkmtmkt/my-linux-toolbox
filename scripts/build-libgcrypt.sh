@@ -2,26 +2,29 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=libgcrypt-1.8.3
+VERSION=1.8.3
+TARGET=libgcrypt-$VERSION
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.bz2
 DOWNLOAD_URL=https://www.gnupg.org/ftp/gcrypt/libgcrypt/$TARGET.tar.bz2
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
-# build
 pushd $BUILD_DIR
-[[ -d $TARGET ]] && rm -rf $TARGET
-tar jxf $ARCHIVE
 
-pushd $TARGET
+# expand
+[[ -d $TARGET ]] && rm -rf $TARGET
+tar xf $ARCHIVE
+cd $TARGET
+
+# build
 ./configure --prefix=$PREFIX \
             --with-libgpg-error-prefix=$PREFIX \
             --with-pth-prefix=$PREFIX &&
 make && make install
 RESULT=$?
-popd
 
 popd
 
+log $TARGET
 exit $RESULT

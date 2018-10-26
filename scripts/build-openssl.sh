@@ -2,21 +2,23 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=OpenSSL_1_1_0i
+VERSION=1_1_1
+TARGET=OpenSSL_$VERSION
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
 DOWNLOAD_URL=https://github.com/openssl/openssl/archive/$TARGET.tar.gz
 [[ ! -s $ARCHIVE ]] && curl -ksSL -o $ARCHIVE $DOWNLOAD_URL
 
-# build
 pushd $BUILD_DIR
+
+# expand
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar zxf $ARCHIVE
+tar xf $ARCHIVE
+cd openssl-$TARGET
 
+# build
 PERL=$PREFIX/bin/perl
-
-pushd openssl-$TARGET
 ./config zlib \
          --prefix=$PREFIX \
          --openssldir=$PREFIX/ssl \
@@ -28,8 +30,8 @@ make install_sw &&
 make install_ssldirs &&
 make install_man_docs
 RESULT=$?
-popd
 
 popd
 
+log $TARGET
 exit $RESULT

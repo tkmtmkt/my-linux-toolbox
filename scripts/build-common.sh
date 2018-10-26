@@ -1,5 +1,5 @@
 #!/bin/bash
-SCRIPT_DIR=$(cd $(dirname $0);pwd)
+SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 BASE_DIR=$(cd $SCRIPT_DIR/..;pwd)
 
 export LANG=C
@@ -21,3 +21,8 @@ export ARCHIVES_DIR=$BASE_DIR/archives
 
 export BUILD_DIR=$BASE_DIR/build
 [[ ! -d $BUILD_DIR ]] && mkdir -p $BUILD_DIR
+
+function log {
+  [[ ! -d "$PREFIX" ]] && mkdir $PREFIX
+  echo "$(TZ='Asia/Tokyo' date -Iminutes) $1" >> $PREFIX/BUILDLOG
+}
