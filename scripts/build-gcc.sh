@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://gcc.gnu.org/
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
@@ -8,6 +9,7 @@ TARGET=gcc-$VERSION
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.xz
 DOWNLOAD_URL=http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/$TARGET/$TARGET.tar.xz
+DOWNLOAD_URL=https://bigsearcher.com/mirrors/gcc/releases/$TARGET/$TARGET.tar.xz
 [[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
 
 pushd $BUILD_DIR
@@ -22,9 +24,10 @@ cd $TARGET
             --enable-languages=c,c++ \
             --disable-bootstrap \
             --disable-multilib \
-            --with-gmp \
-            --with-mpfr \
-            --with-mpc  &&
+            --with-gmp=$PREFIX \
+            --with-mpfr=$PREFIX \
+            --with-mpc=$PREFIX \
+            --with-isl=$PREFIX &&
 make && make install
 RESULT=$?
 
