@@ -20,14 +20,16 @@ tar xf $ARCHIVE
 cd $TARGET
 
 # build
-./configure --prefix=$PREFIX \
-            --enable-languages=c,c++ \
-            --disable-bootstrap \
-            --disable-multilib \
-            --with-gmp=$PREFIX \
-            --with-mpfr=$PREFIX \
-            --with-mpc=$PREFIX \
-            --with-isl=$PREFIX &&
+mkdir build
+cd build
+../configure --prefix=$PREFIX \
+             --enable-languages=c,c++ \
+             --disable-bootstrap \
+             --disable-multilib \
+             --with-gmp=$PREFIX \
+             --with-mpfr=$PREFIX \
+             --with-mpc=$PREFIX \
+             --with-isl=$PREFIX &&
 make && make install
 RESULT=$?
 
