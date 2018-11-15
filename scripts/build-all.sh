@@ -97,6 +97,7 @@ nkf
 jq
 bc
 ssh-chat
+fossil
 
 ### python-packages
 proj4
