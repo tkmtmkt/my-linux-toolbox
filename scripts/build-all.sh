@@ -53,11 +53,11 @@ sqlite3
 libffi
 
 ### gcc
-gmp
-mpfr
-mpc
-isl
-gcc
+#gmp
+#mpfr
+#mpc
+#isl
+#gcc
 
 ### git
 git
