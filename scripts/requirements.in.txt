@@ -16,13 +16,14 @@ cytoolz                     # Cython implementation of Toolz: High performance f
 nose                        # nose extends unittest to make testing easier
 # file format
 csvkit                      # A suite of command-line tools for working with CSV, the king of tabular file formats.
+openpyxl==2.5.12
 beautifulsoup4              # Screen-scraping library
 lxml                        # Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API.
 XlsxWriter                  # A Python module for creating Excel XLSX files.
 h5py                        # Read and write HDF5 files from Python
 # ansible
 ansible                     # Radically simple IT automation
-testinfra==1.16.0           # Test infrastructures
+testinfra==1.18.0           # Test infrastructures
 pyOpenSSL                   # Python wrapper module around the OpenSSL library
 pytest-xdist                # pytest xdist plugin for distributed testing and loop-on-failing modes
 # sphinx
