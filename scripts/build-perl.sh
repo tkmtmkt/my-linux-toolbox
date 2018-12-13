@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-VERSION=5.28.0
+VERSION=5.28.1
 TARGET=perl-$VERSION
 
 # download
