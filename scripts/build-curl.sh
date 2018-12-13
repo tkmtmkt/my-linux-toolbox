@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-VERSION=7.61.1
+VERSION=7.63.0
 TARGET=curl-$VERSION
 
 # download
