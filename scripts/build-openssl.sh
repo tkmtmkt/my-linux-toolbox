@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-VERSION=1_1_1
+VERSION=1_1_1a
 TARGET=OpenSSL_$VERSION
 
 # download
