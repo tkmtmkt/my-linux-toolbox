@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-VERSION=1.32
+VERSION=1.33
 TARGET=libgpg-error-$VERSION
 
 # download
