@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-VERSION=3.7.1
+VERSION=3.7.2
 TARGET=Python-$VERSION
 
 # download
