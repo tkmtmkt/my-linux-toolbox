@@ -50,6 +50,9 @@ matplotlib                  # Python plotting package
 #Shapely                     # Geometric objects, predicates, and operations
 bokeh                       # Interactive plots and applications in the browser from Python
 bkcharts                    # High level chart types built on top of Bokeh
+# Jupyter kernel
+bash_kernel                 # A bash kernel for Jupyter
+toree                       # A Jupyter kernel for enabling remote applications to interaction with Apache Spark.
 # other
 odo                         # Data migration utilities
 dask                        # Parallel PyData with Task Scheduling
