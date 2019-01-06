@@ -1,5 +1,5 @@
 #!/bin/bash
-SCRIPT_DIR=$(cd $(dirname $0);pwd)
+SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 
 case "$1" in
   centos[67]|ubuntu1[46]04)
