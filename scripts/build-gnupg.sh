@@ -21,6 +21,7 @@ cd $TARGET
 export LDFLAGS="$LDFLAGS -lrt"
 ./configure --prefix=$PREFIX \
             ac_cv_func_inotify_init=no \
+            --enable-gpg-is-gpg2 \
             --with-tar=$PREFIX/bin/tar \
             --with-libgpg-error-prefix=$PREFIX \
             --with-libgcrypt-prefix=$PREFIX \
