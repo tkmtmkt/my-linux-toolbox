@@ -88,6 +88,7 @@ gnupg
 libxml2
 tar
 p7zip
+pwgen
 global
 highway
 multitail
