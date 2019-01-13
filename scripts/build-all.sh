@@ -91,6 +91,7 @@ p7zip
 pwgen
 global
 highway
+direnv
 multitail
 parallel
 rlwrap
