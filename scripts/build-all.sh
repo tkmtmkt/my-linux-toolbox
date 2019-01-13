@@ -48,9 +48,10 @@ gettext
 readline
 expat
 openssl
-curl
 sqlite3
 libffi
+curl
+tar
 
 ### gcc
 #gmp
@@ -58,6 +59,15 @@ libffi
 #mpc
 #isl
 #gcc
+
+### GnuPG
+libgpg-error
+npth
+libgcrypt
+libksba
+libassuan
+ntbtls
+gnupg
 
 ### git
 git
@@ -75,31 +85,21 @@ vim
 libevent
 tmux
 
-### GnuPG
-libgpg-error
-npth
-libgcrypt
-libksba
-libassuan
-ntbtls
-gnupg
-
 ### util
-libxml2
-tar
 p7zip
-pwgen
-global
 highway
-direnv
-multitail
-parallel
-rlwrap
+global
 nkf
+libxml2
 jq
-bc
-ssh-chat
+pwgen
+direnv
+rlwrap
+parallel
+multitail
 fossil
+ssh-chat
+bc
 
 ### python-packages
 proj4
