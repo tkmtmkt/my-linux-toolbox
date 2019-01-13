@@ -53,13 +53,6 @@ libffi
 curl
 tar
 
-### gcc
-#gmp
-#mpfr
-#mpc
-#isl
-#gcc
-
 ### GnuPG
 libgpg-error
 npth
