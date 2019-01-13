@@ -1,6 +1,7 @@
 version: '2'
 services:
   centos6:
+    image: centos_toolbox:6.8
     build: ./centos6
     hostname: centos6
     tty: true
@@ -9,30 +10,13 @@ services:
       - './centos6/opt/toolbox/:/opt/toolbox/:rw'
       - '../scripts/:/opt/toolbox/workspace/scripts/:rw'
       - '../archives/:/opt/toolbox/workspace/archives/:rw'
-  centos7:
-    build: ./centos7
-    hostname: centos7
-    tty: true
-    volumes:
-      - './centos7/home/:/home/:rw'
-      - './centos7/opt/toolbox/:/opt/toolbox/:rw'
-      - '../scripts/:/opt/toolbox/workspace/scripts/:rw'
-      - '../archives/:/opt/toolbox/workspace/archives/:rw'
   ubuntu1404:
+    image: ubuntu_toolbox:14.04
     build: ./ubuntu1404
     hostname: ubuntu1404
     tty: true
     volumes:
       - './ubuntu1404/home/:/home/:rw'
       - './ubuntu1404/opt/toolbox/:/opt/toolbox/:rw'
-      - '../scripts/:/opt/toolbox/workspace/scripts/:rw'
-      - '../archives/:/opt/toolbox/workspace/archives/:rw'
-  ubuntu1604:
-    build: ./ubuntu1604
-    hostname: ubuntu1604
-    tty: true
-    volumes:
-      - './ubuntu1604/home/:/home/:rw'
-      - './ubuntu1604/opt/toolbox/:/opt/toolbox/:rw'
       - '../scripts/:/opt/toolbox/workspace/scripts/:rw'
       - '../archives/:/opt/toolbox/workspace/archives/:rw'

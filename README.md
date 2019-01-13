@@ -15,13 +15,7 @@
     │  ├─centos6/
     │  │  ├─opt/toolbox/
     │  │  └─Dockerfile
-    │  ├─centos7/
-    │  │  ├─opt/toolbox/
-    │  │  └─Dockerfile
     │  ├─ubuntu1404/
-    │  │  ├─opt/toolbox/
-    │  │  └─Dockerfile
-    │  ├─ubuntu1604/
     │  │  ├─opt/toolbox/
     │  │  └─Dockerfile
     │  └─docker-compose.yml
@@ -50,7 +44,5 @@ dockerでビルドとインストールを実行できるようにした。
 ```sh
 $ cd docker
 $ ./build.sh centos6
-$ ./build.sh centos7
 $ ./build.sh ubuntu1404
-$ ./build.sh ubuntu1604
 ```
