@@ -1,37 +1,37 @@
 #!/bin/bash
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
-source $SCRIPT_DIR/build-common.sh
+source ${SCRIPT_DIR}/build-common.sh
 
 VERSION=8.1.0578
-TARGET=vim-$VERSION
+TARGET=vim-${VERSION}
 
 # download
-ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
-DOWNLOAD_URL=https://github.com/vim/vim/archive/v$VERSION.tar.gz
-[[ ! -s $ARCHIVE ]] && curl -ksSL $DOWNLOAD_URL -o $ARCHIVE
+ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tar.gz
+DOWNLOAD_URL=https://github.com/vim/vim/archive/v${VERSION}.tar.gz
+[[ ! -s ${ARCHIVE} ]] && curl -ksSL ${DOWNLOAD_URL} -o ${ARCHIVE}
 
 VIMDOC_JA=vimdoc-ja.tar.gz
-[[ ! -s "$ARCHIVES_DIR/$VIMDOC_JA" ]] &&
-  curl -ksSL https://github.com/vim-jp/vimdoc-ja/archive/master.tar.gz -o "$ARCHIVES_DIR/$VIMDOC_JA"
+[[ ! -s "${ARCHIVES_DIR}/${VIMDOC_JA}" ]] &&
+  curl -ksSL https://github.com/vim-jp/vimdoc-ja/archive/master.tar.gz -o "${ARCHIVES_DIR}/${VIMDOC_JA}"
 
-pushd $BUILD_DIR
+pushd ${BUILD_DIR}
 
 # expand
-[[ -d $TARGET ]] && rm -rf $TARGET
-tar xf $ARCHIVE
-cd $TARGET
+[[ -d ${TARGET} ]] && rm -rf ${TARGET}
+tar xf ${ARCHIVE}
+cd ${TARGET}
 
 # build
-tar xf "$ARCHIVES_DIR/$VIMDOC_JA" &&
+tar xf "${ARCHIVES_DIR}/${VIMDOC_JA}" &&
 cp -p vimdoc-ja-master/doc/* runtime/doc/ &&
 cp -p vimdoc-ja-master/syntax/* runtime/syntax/ &&
 
-./configure --prefix=$PREFIX \
+./configure --prefix=${PREFIX} \
             --with-features=huge \
             --enable-fail-if-missing \
             --enable-multibyte \
             --enable-luainterp \
-            --with-lua-prefix=$PREFIX \
+            --with-lua-prefix=${PREFIX} \
             --enable-perlinterp \
             --enable-python3interp \
             --enable-rubyinterp \
@@ -39,10 +39,10 @@ cp -p vimdoc-ja-master/syntax/* runtime/syntax/ &&
             --enable-cscope \
             --enable-fontset &&
 make && make install &&
-ln -sf vim $PREFIX/bin/vi
+ln -sf vim ${PREFIX}/bin/vi
 RESULT=$?
 
 popd
 
-log $TARGET
-exit $RESULT
+log ${TARGET}
+exit ${RESULT}
