@@ -95,7 +95,5 @@ ssh-chat
 bc
 
 ### python-packages
-proj4
-geos
 python-packages
 EOS

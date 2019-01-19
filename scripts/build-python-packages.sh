@@ -22,7 +22,6 @@ else
 
   # online install (other)
   pip3 install -r ${SCRIPT_DIR}/requirements.in.txt &&
-  pip3 install Cartopy Shapely &&
   pip3 freeze > ${SCRIPT_DIR}/requirements.txt &&
 
   # download packages -> wheels directory
