@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=2.20.0
+VERSION=2.20.1
 TARGET=git-${VERSION}
 
 # download
