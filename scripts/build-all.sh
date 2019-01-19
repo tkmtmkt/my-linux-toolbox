@@ -94,6 +94,13 @@ fossil
 ssh-chat
 bc
 
+### gcc
+gmp
+mpfr
+mpc
+isl
+gcc
+
 ### python-packages
 proj4
 geos
