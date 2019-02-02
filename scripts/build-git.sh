@@ -21,7 +21,8 @@ cd ${TARGET}
 make configure &&
 ./configure --prefix=${PREFIX} \
             --with-zlib=${PREFIX}/lib \
-            --with-perl=${PREFIX}/bin/perl &&
+            --with-perl=${PREFIX}/bin/perl \
+            --with-tcltk=no &&
 make all &&
 make install &&
 cp -rp ./contrib ${PREFIX}/share/git-core/
