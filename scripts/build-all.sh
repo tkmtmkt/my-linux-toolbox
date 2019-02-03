@@ -93,6 +93,7 @@ multitail
 fossil
 ssh-chat
 bc
+taskwarrior
 
 ### python-packages
 python-packages
