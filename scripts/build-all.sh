@@ -95,6 +95,7 @@ ssh-chat
 bc
 taskwarrior
 weechat
+neomutt
 
 ### python-packages
 python-packages
