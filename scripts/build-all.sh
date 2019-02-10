@@ -94,6 +94,7 @@ fossil
 ssh-chat
 bc
 taskwarrior
+weechat
 
 ### python-packages
 python-packages
