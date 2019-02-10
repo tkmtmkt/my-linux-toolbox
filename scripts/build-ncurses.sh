@@ -35,7 +35,7 @@ do
   ln -sf lib${lib}w.a    ${PREFIX}/lib/lib${lib}.a
   ln -sf lib${lib}w.so   ${PREFIX}/lib/lib${lib}.so
   ln -sf lib${lib}w.so.6 ${PREFIX}/lib/lib${lib}.so.6
-  ln -sf lib${lib}w.pc   ${PREFIX}/lib/pkgconfig/${lib}.pc
+  ln -sf ${lib}w.pc      ${PREFIX}/lib/pkgconfig/${lib}.pc
 done
 RESULT=$?
 
