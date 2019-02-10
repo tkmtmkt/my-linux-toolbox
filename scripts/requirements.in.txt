@@ -3,7 +3,7 @@ ipython                     # IPython: Productive Interactive Computing
 pipdeptree                  # Command line utility to show dependency tree of packages
 # ansible
 ansible                     # Radically simple IT automation
-testinfra==1.18.0           # Test infrastructures
+testinfra                   # Test infrastructures
 pyOpenSSL                   # Python wrapper module around the OpenSSL library
 pytest-xdist                # pytest xdist plugin for distributed testing and loop-on-failing modes
 # sphinx
@@ -28,7 +28,6 @@ Cython                      # The Cython compiler for writing C extensions for t
 cytoolz                     # Cython implementation of Toolz: High performance functional utilities
 # file format
 csvkit                      # A suite of command-line tools for working with CSV, the king of tabular file formats.
-openpyxl==2.5.12
 beautifulsoup4              # Screen-scraping library
 lxml                        # Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API.
 XlsxWriter                  # A Python module for creating Excel XLSX files.
