@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://github.com/vim/vim/releases
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 

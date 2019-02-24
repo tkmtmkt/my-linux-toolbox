@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://pkg-config.freedesktop.org/releases/?C=M;O=D
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 

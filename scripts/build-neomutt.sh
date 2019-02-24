@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://github.com/neomutt/neomutt/releases
 # https://neomutt.org/
 # libxslt
 # libidn-devel
