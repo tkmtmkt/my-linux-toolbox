@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=8.1.0751
+VERSION=8.1.0978
 TARGET=vim-${VERSION}
 
 # download
