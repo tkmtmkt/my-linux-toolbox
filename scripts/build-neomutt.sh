@@ -1,8 +1,5 @@
 #!/bin/bash
 # https://github.com/neomutt/neomutt/releases
-# https://neomutt.org/
-# libxslt
-# libidn-devel
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
