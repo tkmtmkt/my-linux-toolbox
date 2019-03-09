@@ -52,6 +52,7 @@ sqlite3
 libffi
 curl
 tar
+oniguruma
 
 ### GnuPG
 libgpg-error
