@@ -27,19 +27,7 @@ else
   # download packages -> wheels directory
   if [[ -d ${WHEELS_DIR} ]]; then rm -rf ${WHEELS_DIR}; fi &&
   pip3 wheel -w ${WHEELS_DIR} pip wheel &&
-  pip3 wheel -w ${WHEELS_DIR} -r ${SCRIPT_DIR}/requirements.txt &&
-
-  # TODO: Provisional action until supervisor version 4 is released.
-  pip3 install git+https://github.com/Supervisor/supervisor &&
-  pip3 freeze > ${SCRIPT_DIR}/requirements.txt &&
-  pip3 wheel -w ${WHEELS_DIR} meld3 &&
-  # make wheel of Supervisor
-  # refs:  https://stackoverflow.com/questions/19796883/supervisord-for-python-3
-  if [[ -d ${TARGET} ]]; then rm -rf ${TARGET}; fi &&
-  git clone https://github.com/Supervisor/supervisor.git ${TARGET}/supervisor &&
-  cd ${TARGET}/supervisor &&
-  python setup.py bdist_wheel &&
-  cp -p ./dist/supervisor-*.whl ${WHEELS_DIR}
+  pip3 wheel -w ${WHEELS_DIR} -r ${SCRIPT_DIR}/requirements.txt
 fi
 RESULT=$?
 

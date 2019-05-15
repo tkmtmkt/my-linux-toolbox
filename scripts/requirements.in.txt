@@ -16,6 +16,7 @@ sphinxcontrib-nwdiag        # Sphinx "nwdiag" extension
 sphinx-rtd-theme            # Read the Docs theme for Sphinx
 Flask-Sphinx-Themes         # Sphinx themes for Flask and related projects.
 # util
+supervisor                  # A system for controlling process state under UNIX
 glob2                       # Version of the glob module that can capture patterns and supports recursive wildcards
 path.py                     # A module wrapper for os.path
 pathlib2                    # Object-oriented filesystem paths
