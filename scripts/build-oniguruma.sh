@@ -1,5 +1,5 @@
 #!/bin/bash
-# https://github.com/stedolan/jq/releases
+# https://github.com/kkos/oniguruma/releases
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
