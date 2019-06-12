@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=2.2.13
+VERSION=2.2.16
 TARGET=gnupg-${VERSION}
 
 # download
