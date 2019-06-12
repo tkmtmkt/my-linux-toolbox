@@ -32,6 +32,7 @@ do
   esac
 done <<'EOS'
 ### base
+cmake
 pkgconfig
 perl
 m4
