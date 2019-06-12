@@ -20,9 +20,8 @@ cd ${TARGET}
 
 # build
 ./configure --prefix=${PREFIX} \
-            --disable-shared \
             --with-history \
-            --with-python=${PREFIX}/bin/python3 \
+            --without-python \
             --with-icu \
             --with-threads &&
 make && make install

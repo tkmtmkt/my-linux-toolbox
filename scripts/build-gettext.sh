@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=0.19.8.1
+VERSION=0.20.1
 TARGET=gettext-${VERSION}
 
 # download
@@ -19,8 +19,9 @@ tar xf ${ARCHIVE}
 cd ${TARGET}
 
 # build
+-Wl,-rpath -Wl,LIBDIR
 ./configure --prefix=${PREFIX} \
-            --disable-shared &&
+            --with-libxml2-prefix=${PREFIX}/lib &&
 make && make install
 RESULT=$?
 

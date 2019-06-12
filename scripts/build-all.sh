@@ -45,6 +45,7 @@ zlib
 bzip
 xz
 ncurses
+libxml2
 gettext
 readline
 expat
@@ -85,7 +86,6 @@ p7zip
 highway
 global
 nkf
-libxml2
 jq
 pwgen
 direnv
