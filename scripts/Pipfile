@@ -1,0 +1,57 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+# base
+ipython = "*"                   # IPython: Productive Interactive Computing
+pipdeptree = "*"                # Command line utility to show dependency tree of packages
+# ansible
+ansible = "*"                   # Radically simple IT automation
+testinfra = "*"                 # Test infrastructures
+pyOpenSSL = "*"                 # Python wrapper module around the OpenSSL library
+pytest-xdist = "*"              # pytest xdist plugin for distributed testing and loop-on-failing modes
+# sphinx
+Sphinx = "*"                    # Python documentation generator
+recommonmark = "*"              #
+sphinxcontrib-blockdiag = "*"   # Sphinx "blockdiag" extension
+sphinxcontrib-seqdiag = "*"     # Sphinx "seqdiag" extension
+sphinxcontrib-actdiag = "*"     # Sphinx "actdiag" extension
+sphinxcontrib-nwdiag = "*"      # Sphinx "nwdiag" extension
+sphinx-rtd-theme = "*"          # Read the Docs theme for Sphinx
+Flask-Sphinx-Themes = "*"       # Sphinx themes for Flask and related projects.
+# util
+supervisor = "*"                # A system for controlling process state under UNIX
+glob2 = "*"                     # Version of the glob module that can capture patterns and supports recursive wildcards
+"path.py" = "*"                 # A module wrapper for os.path
+pathlib2 = "*"                  # Object-oriented filesystem paths
+pycodestyle = "*"               # Python style guide checker
+pydocstyle = "*"                # Python docstring style checker
+pylint = "*"                    # python code static checker
+colorama = "*"                  # Cross-platform colored terminal text.
+Cython = "*"                    # The Cython compiler for writing C extensions for the Python language.
+cytoolz = "*"                   # Cython implementation of Toolz: High performance functional utilities
+# file format
+csvkit = "*"                    # A suite of command-line tools for working with CSV, the king of tabular file formats.
+beautifulsoup4 = "*"            # Screen-scraping library
+lxml = "*"                      # Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API.
+XlsxWriter = "*"                # A Python module for creating Excel XLSX files.
+h5py = "*"                      # Read and write HDF5 files from Python
+# Jupyter
+jupyter = "*"                   # Jupyter metapackage. Install all the Jupyter components in one go.
+bash_kernel = "*"               # A bash kernel for Jupyter
+toree = "*"                     # A Jupyter kernel for enabling remote applications to interaction with Apache Spark.
+# calc
+numpy = "*"                     # NumPy: array processing for numbers, strings, records, and objects.
+scipy = "*"                     # SciPy: Scientific Library for Python
+pandas = "*"                    # Powerful data structures for data analysis, time series, and statistics
+# plot
+matplotlib = "*"                # Python plotting package
+bokeh = "*"                     # Interactive plots and applications in the browser from Python
+bkcharts = "*"                  # High level chart types built on top of Bokeh
+
+[requires]
+python_version = "3.7"

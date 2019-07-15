@@ -6,7 +6,7 @@ TARGET=python-packages
 
 WHEELS_DIR=${ARCHIVES_DIR}/wheels
 
-pushd ${BUILD_DIR}
+pushd ${SCRIPT_DIR}
 
 # python packages
 if [[ "${OFFLINE}" = "yes" ]]
@@ -17,11 +17,12 @@ then
   # offline install (other)
   pip3 install --no-deps --no-index -f ${WHEELS_DIR} -r ${SCRIPT_DIR}/requirements.txt
 else
-  # online install (pip & wheel)
-  pip3 install --upgrade pip wheel &&
+  # online install (pip & wheel & pipenv)
+  pip3 install --upgrade pip wheel pipenv &&
 
   # online install (other)
-  pip3 install -r ${SCRIPT_DIR}/requirements.in.txt &&
+  pipenv lock &&
+  pipenv install --system &&
   pip3 freeze > ${SCRIPT_DIR}/requirements.txt &&
 
   # download packages -> wheels directory
