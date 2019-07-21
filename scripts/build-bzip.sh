@@ -3,12 +3,12 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=1.0.6
+VERSION=1.0.7
 TARGET=bzip2-${VERSION}
 
 # download
 ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tar.gz
-DOWNLOAD_URL=https://fossies.org/linux/misc/${TARGET}.tar.gz
+DOWNLOAD_URL=https://sourceware.org/pub/bzip2/${TARGET}.tar.gz
 [[ ! -s ${ARCHIVE} ]] && curl -ksSL ${DOWNLOAD_URL} -o ${ARCHIVE}
 
 pushd ${BUILD_DIR}
