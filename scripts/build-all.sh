@@ -84,6 +84,7 @@ tmux
 ### util
 p7zip
 highway
+pt
 global
 nkf
 jq
