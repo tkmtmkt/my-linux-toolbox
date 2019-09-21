@@ -85,6 +85,7 @@ tmux
 p7zip
 highway
 pt
+ripgrep
 global
 nkf
 jq
