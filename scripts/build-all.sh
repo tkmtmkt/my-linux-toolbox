@@ -33,6 +33,7 @@ do
 done <<'EOS'
 ### base
 cmake
+bazel
 pkgconfig
 perl
 m4
