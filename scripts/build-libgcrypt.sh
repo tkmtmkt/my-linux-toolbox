@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=1.8.4
+VERSION=1.8.5
 TARGET=libgcrypt-${VERSION}
 
 # download
