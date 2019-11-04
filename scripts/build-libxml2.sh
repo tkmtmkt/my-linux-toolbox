@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=2.9.8
+VERSION=2.9.10
 TARGET=libxml2-${VERSION}
 
 # download
