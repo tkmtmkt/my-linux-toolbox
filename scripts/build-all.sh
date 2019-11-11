@@ -53,6 +53,7 @@ expat
 openssl
 sqlite3
 libffi
+rsync
 curl
 tar
 oniguruma
