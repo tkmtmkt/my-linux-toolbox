@@ -72,6 +72,7 @@ git
 tig
 
 ### language
+julia
 lua
 python
 ruby
