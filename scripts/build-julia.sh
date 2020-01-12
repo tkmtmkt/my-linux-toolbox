@@ -3,12 +3,12 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=1.2.0
+VERSION=1.3.1
 TARGET=julia-${VERSION}
 
 # download
 ARCHIVE=${ARCHIVES_DIR}/${TARGET}-linux-x86_64.tar.gz
-DOWNLOAD_URL=https://julialang-s3.julialang.org/bin/linux/x64/1.2/${TARGET}-linux-x86_64.tar.gz
+DOWNLOAD_URL=https://julialang-s3.julialang.org/bin/linux/x64/1.3/${TARGET}-linux-x86_64.tar.gz
 if [[ ! -s ${ARCHIVE} ]]; then
   echo "curl -ksSL ${DOWNLOAD_URL} -o ${ARCHIVE}"
   curl -ksSL ${DOWNLOAD_URL} -o ${ARCHIVE}
