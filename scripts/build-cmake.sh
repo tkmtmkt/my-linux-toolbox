@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=3.15.5
+VERSION=3.16.2
 TARGET=cmake-${VERSION}-Linux-x86_64
 
 # download
