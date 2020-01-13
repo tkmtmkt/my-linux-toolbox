@@ -58,6 +58,10 @@ curl
 tar
 oniguruma
 
+### OpenLDAP
+cyrus-sasl
+openldap
+
 ### GnuPG
 libgpg-error
 npth
