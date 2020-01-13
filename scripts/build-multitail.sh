@@ -19,8 +19,7 @@ tar xf ${ARCHIVE}
 cd ${TARGET}
 
 # build
-sed -i -e "s|DESTDIR=|DESTDIR=${PREFIX}|g" \
-       -e "s|PREFIX=/usr|PREFIX=|g" Makefile &&
+sed -i -e "s|PREFIX=/usr/local|PREFIX=${PREFIX}|g" Makefile &&
 make && make install
 RESULT=$?
 
