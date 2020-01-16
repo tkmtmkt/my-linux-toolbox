@@ -95,6 +95,7 @@ ripgrep
 global
 nkf
 jq
+fio
 pwgen
 direnv
 rlwrap

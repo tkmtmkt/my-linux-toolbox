@@ -77,6 +77,7 @@ $ ./build.sh ubuntu1604
 [nkf](https://ja.osdn.net/projects/nkf/)            | 異なる文字コード間の変換を行うソフトウェア
 [libxml2](http://xmlsoft.org/)                      | XMLデータの整形、抽出を行う（xmllintコマンド）
 [jq](https://stedolan.github.io/jq/)                | JSONデータの整形、抽出を行うコマンド
+[fio](https://https://github.com/axboe/fio)         | ディスク性能テストツール
 [pwgen](https://sourceforge.net/projects/pwgen/)    | ランダムなパスワードを生成するコマンド
 [bc](https://www.gnu.org/software/bc/)              | 任意精度計算機。シェルで数値計算を行うのに使用する。
 [direnv](https://direnv.net/)                       | ディレクトリ毎に環境変数を定義して、そのディレクトリがカレントになった時だけ環境変数を有効/無効にするツール
