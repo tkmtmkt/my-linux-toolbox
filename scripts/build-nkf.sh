@@ -20,7 +20,9 @@ cd ${TARGET}
 
 # build
 sed -i "s|/usr/local|${PREFIX}|g" Makefile &&
-make && make install
+make && make install &&
+sed -i "s|-jW||g" man/make_doc.sh &&
+man/make_doc.sh && make install-man-ja &&
 RESULT=$?
 
 popd
