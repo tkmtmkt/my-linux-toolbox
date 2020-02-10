@@ -4,7 +4,14 @@ SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
 VERSION=2.2.0
-TARGET=pt_linux_amd64
+case $(uname -m) in
+  x86_64)
+    TARGET=pt_linux_amd64
+    ;;
+  aarch64)
+    TARGET=pt_linux_arm
+    ;;
+esac
 
 # download
 ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tar.gz

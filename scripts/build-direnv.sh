@@ -7,8 +7,16 @@ VERSION=2.20.0
 TARGET=direnv
 
 # download
-ARCHIVE=${ARCHIVES_DIR}/${TARGET}.linux-amd64
-DOWNLOAD_URL=https://github.com/direnv/direnv/releases/download/v${VERSION}/${TARGET}.linux-amd64
+case $(uname -m) in
+  x86_64)
+    ARCHIVE=${ARCHIVES_DIR}/${TARGET}.linux-amd64
+    DOWNLOAD_URL=https://github.com/direnv/direnv/releases/download/v${VERSION}/${TARGET}.linux-amd64
+    ;;
+  aarch64)
+    ARCHIVE=${ARCHIVES_DIR}/${TARGET}.linux-arm
+    DOWNLOAD_URL=https://github.com/direnv/direnv/releases/download/v${VERSION}/${TARGET}.linux-arm
+    ;;
+esac
 [[ ! -s ${ARCHIVE} ]] && curl -ksSL ${DOWNLOAD_URL} -o ${ARCHIVE}
 
 pushd ${BUILD_DIR}
