@@ -17,7 +17,7 @@ pushd ${BUILD_DIR}
 [[ -e ${TARGET} ]] && rm -rf ${TARGET}
 tar xf ${ARCHIVE}
 
-# build
+# build (download only)
 cp -rp ${TARGET}/* ${PREFIX}/
 RESULT=$?
 

@@ -20,7 +20,7 @@ pushd ${BUILD_DIR}
 [[ -d ${TARGET} ]] && rm -rf ${TARGET}
 tar xf ${ARCHIVE}
 
-# build
+# build (download only)
 rsync -av ${TARGET}/ ${PREFIX}/
 RESULT=$?
 

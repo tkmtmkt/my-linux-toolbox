@@ -16,7 +16,7 @@ pushd ${BUILD_DIR}
 # expand
 tar xf ${ARCHIVE}
 
-# build
+# build (download only)
 cp -p ${TARGET}/rg ${PREFIX}/bin/rg &&
 chmod a+x ${PREFIX}/bin/rg
 RESULT=$?

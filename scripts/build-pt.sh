@@ -16,7 +16,7 @@ pushd ${BUILD_DIR}
 # expand
 tar xf ${ARCHIVE}
 
-# build
+# build (download only)
 cp -p ${TARGET}/pt ${PREFIX}/bin/pt &&
 chmod a+x ${PREFIX}/bin/pt
 RESULT=$?

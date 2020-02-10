@@ -18,7 +18,7 @@ pushd ${BUILD_DIR}
 
 # expand
 
-# build
+# build (download only)
 cp -p ${ARCHIVE} ${PREFIX}/bin/bazel &&
 chmod a+x ${PREFIX}/bin/bazel
 RESULT=$?

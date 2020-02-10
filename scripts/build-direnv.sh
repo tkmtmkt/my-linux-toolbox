@@ -15,7 +15,7 @@ pushd ${BUILD_DIR}
 
 # expand
 
-# build
+# build (download only)
 cp ${ARCHIVE} ${PREFIX}/bin/${TARGET} &&
 chmod a+x ${PREFIX}/bin/${TARGET}
 RESULT=$?

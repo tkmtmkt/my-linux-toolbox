@@ -18,7 +18,7 @@ pushd ${BUILD_DIR}
 tar xf ${ARCHIVE}
 cd ${TARGET}
 
-# build
+# build (download only)
 cp ./ssh-chat ${PREFIX}/bin/
 RESULT=$?
 
