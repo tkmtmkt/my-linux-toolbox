@@ -20,6 +20,7 @@ cd ${TARGET}
 
 # build
 ./configure --prefix=${PREFIX} \
+            --with-ssl=${PREFIX} \
             --disable-doc \
             --disable-idn &&
 make && make install
