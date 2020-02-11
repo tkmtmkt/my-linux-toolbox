@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=2.0.0
+VERSION=2.1.0
 TARGET=bazel-${VERSION}-linux-x86_64
 
 # download
