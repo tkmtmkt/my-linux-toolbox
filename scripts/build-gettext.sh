@@ -19,9 +19,8 @@ tar xf ${ARCHIVE}
 cd ${TARGET}
 
 # build
--Wl,-rpath -Wl,LIBDIR
 ./configure --prefix=${PREFIX} \
-            --with-libxml2-prefix=${PREFIX}/lib &&
+            --with-libxml2-prefix=${PREFIX} &&
 make && make install
 RESULT=$?
 
