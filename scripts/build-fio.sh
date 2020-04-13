@@ -1,9 +1,9 @@
 #!/bin/bash
-# https://github.com/git/git/releases
+# https://github.com/axboe/fio/releases
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=3.17
+VERSION=3.19
 TARGET=fio-${VERSION}
 
 # download
