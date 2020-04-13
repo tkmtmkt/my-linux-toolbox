@@ -3,18 +3,18 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=1.3.1
-TARGET=julia-${VERSION}
+VERSION=1.4
+TARGET=julia-${VERSION}.0
 
 # download
 case $(uname -m) in
   x86_64)
     ARCHIVE=${ARCHIVES_DIR}/${TARGET}-linux-x86_64.tar.gz
-    DOWNLOAD_URL=https://julialang-s3.julialang.org/bin/linux/x64/1.3/${TARGET}-linux-x86_64.tar.gz
+    DOWNLOAD_URL=https://julialang-s3.julialang.org/bin/linux/x64/${VERSION}/${TARGET}-linux-x86_64.tar.gz
     ;;
   aarch64)
     ARCHIVE=${ARCHIVES_DIR}/${TARGET}-linux-aarch64.tar.gz
-    DOWNLOAD_URL=https://julialang-s3.julialang.org/bin/linux/aarch64/1.3/${TARGET}-linux-aarch64.tar.gz
+    DOWNLOAD_URL=https://julialang-s3.julialang.org/bin/linux/aarch64/${VERSION}/${TARGET}-linux-aarch64.tar.gz
     ;;
 esac
 if [[ ! -s ${ARCHIVE} ]]; then
