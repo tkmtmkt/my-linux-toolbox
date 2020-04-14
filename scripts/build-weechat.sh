@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=2.5
+VERSION=2.8
 TARGET=weechat-${VERSION}
 
 # download
@@ -23,8 +23,15 @@ mkdir build
 cd build
 cmake -DCMAKE_INSTALL_PREFIX=${PREFIX} \
       -DCMAKE_BUILD_TYPE=Release \
+      -DENABLE_GUILE=OFF \
+      -DENABLE_GNUTLS=OFF \
+      -DENABLE_JAVASCRIPT=OFF \
+      -DENABLE_LUA=OFF \
       -DENABLE_PERL=OFF \
       -DENABLE_PHP=OFF \
+      -DENABLE_PYTHON=OFF \
+      -DENABLE_RUBY=OFF \
+      -DENABLE_SPELL=OFF \
       -DENABLE_TCL=OFF \
       -DNCURSES_INCLUDE_PATH=${PREFIX}/include \
       .. &&
