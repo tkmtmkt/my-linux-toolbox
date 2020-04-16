@@ -111,3 +111,4 @@ neomutt
 ### python-packages
 python-packages
 EOS
+chown -R $(id -u):$(id -g) ${PREFIX}
