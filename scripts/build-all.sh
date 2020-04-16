@@ -107,6 +107,7 @@ bc
 taskwarrior
 weechat
 neomutt
+fetchmail
 
 ### python-packages
 python-packages
