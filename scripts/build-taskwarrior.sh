@@ -20,7 +20,7 @@ cd ${TARGET}
 
 # build
 if [[ -n $(which scl_source 2> /dev/null) ]]; then
-  source scl_source enable devtoolset-7
+  source scl_source enable devtoolset-8
 fi
 cmake -DCMAKE_INSTALL_PREFIX=${PREFIX} \
       -DCMAKE_BUILD_TYPE=release \
