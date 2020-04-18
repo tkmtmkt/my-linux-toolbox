@@ -6,4 +6,3 @@ RUN yum -q -y update && \
     yum -q -y install cmake libtool libuuid-devel && \
     yum -q -y install centos-release-scl && \
     yum -q -y install devtoolset-7
-

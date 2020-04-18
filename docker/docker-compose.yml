@@ -1,22 +1,22 @@
 version: '2'
 services:
-  centos6:
-    image: centos_toolbox:6
-    build: ./centos6
-    hostname: centos6
+  centos:
+    image: centos_toolbox:6.10
+    build: centos
+    hostname: centos
     tty: true
     volumes:
-      - './centos6/home/:/home/:rw'
-      - './centos6/opt/toolbox/:/opt/toolbox/:rw'
+      - './centos/home/:/home/:rw'
+      - './centos/opt/toolbox/:/opt/toolbox/:rw'
       - '../scripts/:/opt/toolbox/workspace/scripts/:rw'
       - '../archives/:/opt/toolbox/workspace/archives/:rw'
-  ubuntu1604:
+  ubuntu:
     image: ubuntu_toolbox:16.04
-    build: ./ubuntu1604
-    hostname: ubuntu1604
+    build: ubuntu
+    hostname: ubuntu
     tty: true
     volumes:
-      - './ubuntu1604/home/:/home/:rw'
-      - './ubuntu1604/opt/toolbox/:/opt/toolbox/:rw'
+      - './ubuntu/home/:/home/:rw'
+      - './ubuntu/opt/toolbox/:/opt/toolbox/:rw'
       - '../scripts/:/opt/toolbox/workspace/scripts/:rw'
       - '../archives/:/opt/toolbox/workspace/archives/:rw'

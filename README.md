@@ -12,10 +12,10 @@
     ├─archives/               ←tarballダウンロード先
     ├─build/                  ←tビルド作業ディレクトリ
     ├─docker/
-    │  ├─centos6/
+    │  ├─centos/
     │  │  ├─opt/toolbox/
     │  │  └─Dockerfile
-    │  ├─ubuntu1604/
+    │  ├─ubuntu/
     │  │  ├─opt/toolbox/
     │  │  └─Dockerfile
     │  └─docker-compose.yml
@@ -44,8 +44,8 @@ dockerでビルドとインストールを実行できるようにした。
 
 ```sh
 $ cd docker
-$ ./build.sh centos6
-$ ./build.sh ubuntu1604
+$ ./build.sh centos
+$ ./build.sh ubuntu
 ```
 
 
