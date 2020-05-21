@@ -14,6 +14,7 @@ do
 done
 
 ARCHIVE=${ARCHIVES_DIR}/${TARGET}$1-$(date +%Y%m%d).tar.gz
+echo "package: ${ARCHIVE/${WORKSPACE_DIR}/..}"
 tar czf ${ARCHIVE} -C $(dirname ${TARGET_DIR}) \
     --exclude=${TARGET}/${WORKSPACE} \
     ${TARGET}
