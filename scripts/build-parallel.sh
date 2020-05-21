@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=20200322
+VERSION=20200422
 TARGET=parallel-${VERSION}
 
 # download
