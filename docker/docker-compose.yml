@@ -6,7 +6,6 @@ services:
     hostname: centos
     tty: true
     volumes:
-      - './centos/home/:/home/:rw'
       - './centos/opt/toolbox/:/opt/toolbox/:rw'
       - '../scripts/:/opt/toolbox/workspace/scripts/:rw'
       - '../archives/:/opt/toolbox/workspace/archives/:rw'
@@ -16,7 +15,6 @@ services:
     hostname: ubuntu
     tty: true
     volumes:
-      - './ubuntu/home/:/home/:rw'
       - './ubuntu/opt/toolbox/:/opt/toolbox/:rw'
       - '../scripts/:/opt/toolbox/workspace/scripts/:rw'
       - '../archives/:/opt/toolbox/workspace/archives/:rw'
