@@ -6,13 +6,14 @@ export WORKSPACE=workspace
 
 case "$1" in
   centos|ubuntu)
-    pushd ${SCRIPT_DIR}
+    pushd ${SCRIPT_DIR} > /dev/null
     docker-compose run --rm $1 ${PREFIX}/${WORKSPACE}/scripts/build-all.sh
     RESULT=$?
-    popd
+    popd > /dev/null
     exit ${RESULT}
     ;;
   *)
     echo "Usage: $0 [centos|ubuntu]"
+    exit 1
     ;;
 esac
