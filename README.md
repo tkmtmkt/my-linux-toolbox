@@ -23,7 +23,8 @@
     └─scripts/
         ├─build-all.sh        ←ビルドスクリプト（個別のビルドスクリプトを全て実行する）
         ├─build-common.sh     ←共通設定用のスクリプト（個別のビルドスクリプトから呼び出される）
-        └─build-xxxx.sh       ←個別のビルドスクリプト
+        ├─build-xxxx.sh       ←個別のビルドスクリプト
+        └─build-package.sh    ←ビルド結果のアーカイブを作成するスクリプト
 
 ```
 

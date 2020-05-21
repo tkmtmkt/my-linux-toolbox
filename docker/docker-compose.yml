@@ -6,15 +6,15 @@ services:
     hostname: centos
     tty: true
     volumes:
-      - './centos/opt/toolbox/:/opt/toolbox/:rw'
-      - '../scripts/:/opt/toolbox/workspace/scripts/:rw'
-      - '../archives/:/opt/toolbox/workspace/archives/:rw'
+      - "./centos${PREFIX}/:${PREFIX}/:rw"
+      - "../scripts/:${PREFIX}/${WORKSPACE}/scripts/:rw"
+      - "../archives/:${PREFIX}/${WORKSPACE}/archives/:rw"
   ubuntu:
     image: ubuntu_toolbox:16.04
     build: ubuntu
     hostname: ubuntu
     tty: true
     volumes:
-      - './ubuntu/opt/toolbox/:/opt/toolbox/:rw'
-      - '../scripts/:/opt/toolbox/workspace/scripts/:rw'
-      - '../archives/:/opt/toolbox/workspace/archives/:rw'
+      - "./ubuntu${PREFIX}/:${PREFIX}/:rw"
+      - "../scripts/:${PREFIX}/${WORKSPACE}/scripts/:rw"
+      - "../archives/:${PREFIX}/${WORKSPACE}/archives/:rw"

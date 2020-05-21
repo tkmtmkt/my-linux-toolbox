@@ -7,7 +7,7 @@ export WORKSPACE=workspace
 case "$1" in
   centos|ubuntu)
     pushd ${SCRIPT_DIR}
-    docker-compose run --rm $1 /bin/bash
+    docker-compose run --rm $1 ${PREFIX}/${WORKSPACE}/scripts/build-package.sh "-$1"
     RESULT=$?
     popd
     exit ${RESULT}
