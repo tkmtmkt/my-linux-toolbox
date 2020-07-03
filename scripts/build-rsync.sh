@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=3.1.3
+VERSION=3.2.1
 TARGET=rsync-${VERSION}
 
 # download
@@ -19,7 +19,10 @@ tar xf ${ARCHIVE}
 
 # build
 cd ${TARGET}
-./configure --prefix=${PREFIX} &&
+./configure --prefix=${PREFIX} \
+            --disable-xxhash \
+            --disable-zstd \
+            --disable-lz4 &&
 make && make install
 RESULT=$?
 
