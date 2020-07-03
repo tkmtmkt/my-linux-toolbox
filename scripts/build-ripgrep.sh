@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=12.1.0
+VERSION=12.1.1
 case $(uname -m) in
   x86_64)
     TARGET=ripgrep-${VERSION}-x86_64-unknown-linux-musl
