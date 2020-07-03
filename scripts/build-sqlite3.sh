@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=3310100
+VERSION=3320300
 TARGET=sqlite-autoconf-${VERSION}
 
 # download
