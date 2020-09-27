@@ -1,9 +1,9 @@
 #!/bin/bash
-# https://download.samba.org/pub/rsync/src/
+# https://download.samba.org/pub/rsync/src/?C=M;O=D
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=3.2.1
+VERSION=3.2.3
 TARGET=rsync-${VERSION}
 
 # download
