@@ -4,7 +4,7 @@ SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
 VERSION=2.7
-TARGET=ruby-${VERSION}.1
+TARGET=ruby-${VERSION}.2
 
 # download
 ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tar.xz
