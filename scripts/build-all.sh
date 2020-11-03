@@ -105,7 +105,6 @@ fossil
 ssh-chat
 bc
 taskwarrior
-weechat
 neomutt
 fetchmail
 
