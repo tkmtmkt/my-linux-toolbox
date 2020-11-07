@@ -22,7 +22,7 @@ cd ${TARGET}
 sed -i "s|/usr/local|${PREFIX}|g" Makefile &&
 make && make install &&
 sed -i "s|-jW||g" man/make_doc.sh &&
-man/make_doc.sh && make install-man-ja &&
+man/make_doc.sh && make install-man-ja
 RESULT=$?
 
 popd

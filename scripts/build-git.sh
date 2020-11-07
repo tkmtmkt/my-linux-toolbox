@@ -24,8 +24,7 @@ make configure &&
             --with-zlib=${PREFIX}/lib \
             --with-perl=${PREFIX}/bin/perl \
             --with-tcltk=no &&
-make all &&
-make install &&
+make all && make install &&
 cp -rp ./contrib ${PREFIX}/share/git-core/
 RESULT=$?
 

@@ -26,7 +26,7 @@ cd ${TARGET}
             --with-system-ffi \
             --with-ensurepip=install &&
 make && make install &&
-ln -sf python3 ${PREFIX}/bin/python &&
+ln -sf python3 ${PREFIX}/bin/python
 RESULT=$?
 
 popd

@@ -23,8 +23,7 @@ cd ${TARGET}
             --disable-bdb \
             --disable-hdb &&
 make depend &&
-make &&
-make install
+make && make install
 RESULT=$?
 
 popd

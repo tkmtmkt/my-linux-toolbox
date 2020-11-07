@@ -20,8 +20,7 @@ cd fio-${TARGET}
 
 # build
 ./configure --prefix=${PREFIX} &&
-make &&
-make install &&
+make && make install
 RESULT=$?
 
 popd

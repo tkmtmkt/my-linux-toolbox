@@ -22,8 +22,7 @@ cd ${TARGET}
 sed -i -e "s|INSTALL_TOP=.*|INSTALL_TOP= ${PREFIX}|g" Makefile &&
 sed -i -e "s|MYLDFLAGS=.*|MYLDFLAGS= -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib|g" \
        -e "s|MYLIBS=.*|MYLIBS= -lncursesw|g" src/Makefile &&
-make linux &&
-make install
+make linux && make install
 RESULT=$?
 
 popd
