@@ -4,7 +4,7 @@ SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
 VERSION=6.4
-TARGET=fetchmail-${VERSION}.13
+TARGET=fetchmail-${VERSION}.15
 
 # download
 ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tar.xz
