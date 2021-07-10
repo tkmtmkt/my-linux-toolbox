@@ -1,7 +1,7 @@
 version: '2'
 services:
   centos:
-    image: centos_toolbox:6.10
+    image: centos_toolbox:7.7.1908
     build: centos
     hostname: centos
     tty: true
