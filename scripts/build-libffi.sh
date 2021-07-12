@@ -3,12 +3,12 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=3.3
+VERSION=3.4.2
 TARGET=libffi-${VERSION}
 
 # download
 ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tar.gz
-DOWNLOAD_URL=https://sourceware.org/ftp/libffi/${TARGET}.tar.gz
+DOWNLOAD_URL=https://github.com/libffi/libffi/releases/download/v${VERSION}/${TARGET}.tar.gz
 [[ ! -s ${ARCHIVE} ]] && curl -ksSL ${DOWNLOAD_URL} -o ${ARCHIVE}
 
 pushd ${BUILD_DIR}
