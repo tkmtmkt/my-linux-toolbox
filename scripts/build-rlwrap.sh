@@ -3,12 +3,12 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=0.43
+VERSION=0.44
 TARGET=rlwrap-${VERSION}
 
 # download
 ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tar.gz
-DOWNLOAD_URL=https://github.com/hanslub42/rlwrap/releases/download/v${VERSION}/${TARGET}.tar.gz
+DOWNLOAD_URL=https://github.com/hanslub42/rlwrap/releases/download/${VERSION}/${TARGET}.tar.gz
 [[ ! -s ${ARCHIVE} ]] && curl -ksSL ${DOWNLOAD_URL} -o ${ARCHIVE}
 
 RLWRAP_EXT=rlwrap-extensions-V12-0.05.tar.gz
