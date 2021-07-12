@@ -44,7 +44,6 @@ h5py = "*"                      # Read and write HDF5 files from Python
 # Jupyter
 jupyter = "*"                   # Jupyter metapackage. Install all the Jupyter components in one go.
 bash_kernel = "*"               # A bash kernel for Jupyter
-toree = "*"                     # A Jupyter kernel for enabling remote applications to interaction with Apache Spark.
 # calc
 numpy = "*"                     # NumPy: array processing for numbers, strings, records, and objects.
 scipy = "*"                     # SciPy: Scientific Library for Python
