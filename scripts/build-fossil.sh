@@ -3,24 +3,22 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=2.13
+VERSION=2.16
 TARGET=fossil
 
 # download
-ARCHIVE=${ARCHIVES_DIR}/${TARGET}-src-${VERSION}.tar.gz
-DOWNLOAD_URL=https://www.fossil-scm.org/home/uv/${TARGET}-src-${VERSION}.tar.gz
+ARCHIVE=${ARCHIVES_DIR}/${TARGET}-linux-x64-${VERSION}.tar.gz
+DOWNLOAD_URL=https://www.fossil-scm.org/home/uv/${TARGET}-linux-x64-${VERSION}.tar.gz
 [[ ! -s ${ARCHIVE} ]] && curl -ksSL ${DOWNLOAD_URL} -o ${ARCHIVE}
 
 pushd ${BUILD_DIR}
 
 # expand
-[[ -e ${TARGET} ]] && rm -rf ${TARGET}
 tar xf ${ARCHIVE}
-cd ${TARGET}-${VERSION}
 
-# build
-./configure --prefix=${PREFIX} &&
-make && make install
+# build (download only)
+cp -p ${TARGET} ${PREFIX}/bin/${TARGET} &&
+chmod a+x ${PREFIX}/bin/${TARGET}
 RESULT=$?
 
 popd
