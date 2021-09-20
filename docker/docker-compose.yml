@@ -10,7 +10,7 @@ services:
       - "../scripts/:${PREFIX}/${WORKSPACE}/scripts/:rw"
       - "../archives/:${PREFIX}/${WORKSPACE}/archives/:rw"
   ubuntu:
-    image: ubuntu_toolbox:16.04
+    image: ubuntu_toolbox:18.04
     build: ubuntu
     hostname: ubuntu
     tty: true
