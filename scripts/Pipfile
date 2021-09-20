@@ -17,10 +17,11 @@ pytest-xdist = "*"              # pytest xdist plugin for distributed testing an
 # sphinx
 Sphinx = "*"                    # Python documentation generator
 recommonmark = "*"              #
-sphinxcontrib-blockdiag = "*"   # Sphinx "blockdiag" extension
-sphinxcontrib-seqdiag = "*"     # Sphinx "seqdiag" extension
-sphinxcontrib-actdiag = "*"     # Sphinx "actdiag" extension
-sphinxcontrib-nwdiag = "*"      # Sphinx "nwdiag" extension
+#sphinxcontrib-blockdiag = "*"   # Sphinx "blockdiag" extension
+#sphinxcontrib-seqdiag = "*"     # Sphinx "seqdiag" extension
+#sphinxcontrib-actdiag = "*"     # Sphinx "actdiag" extension
+#sphinxcontrib-nwdiag = "*"      # Sphinx "nwdiag" extension
+sphinxcontrib-plantuml = "*"    # Sphinx "plantuml" extension
 sphinx-rtd-theme = "*"          # Read the Docs theme for Sphinx
 Flask-Sphinx-Themes = "*"       # Sphinx themes for Flask and related projects.
 # util
