@@ -1,9 +1,10 @@
 #!/bin/bash
+# http://xmlsoft.org/sources/?C=M;O=D
 # http://xmlsoft.org/downloads.html
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=2.9.11
+VERSION=2.9.12
 TARGET=libxml2-${VERSION}
 
 # download
