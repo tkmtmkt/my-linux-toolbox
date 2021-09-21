@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=0.44
+VERSION=0.45.2
 TARGET=rlwrap-${VERSION}
 
 # download
@@ -24,6 +24,7 @@ cd ${TARGET}
 
 # build
 ./configure --prefix=${PREFIX} &&
+echo "#include <stdbool.h>" >> config.h &&
 make && make install
 RESULT=$?
 
