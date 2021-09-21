@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://github.com/halturin/multitail
 # https://www.vanheusden.com/multitail/download.php
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
