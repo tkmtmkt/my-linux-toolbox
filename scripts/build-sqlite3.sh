@@ -20,7 +20,7 @@ cd ${TARGET}
 
 # build
 ./configure --prefix=${PREFIX} \
-            --enable-readline &&
+            --disable-readline &&
 make && make install
 RESULT=$?
 
