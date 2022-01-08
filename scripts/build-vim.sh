@@ -3,12 +3,12 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=8.2.3450
+VERSION=8.2.4038
 TARGET=vim-${VERSION}
 
 # download
 ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tar.gz
-DOWNLOAD_URL=https://github.com/vim/vim/archive/v${VERSION}.tar.gz
+DOWNLOAD_URL=https://github.com/vim/vim/archive/refs/tags/v${VERSION}.tar.gz
 [[ ! -s ${ARCHIVE} ]] && curl -ksSL ${DOWNLOAD_URL} -o ${ARCHIVE}
 
 VIMDOC_JA=vimdoc-ja.tar.gz
