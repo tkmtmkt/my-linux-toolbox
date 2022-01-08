@@ -90,7 +90,7 @@ pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==9.0.0
 pipdeptree==2.2.0
-pipenv==2021.11.23
+pipenv==2022.1.8
 platformdirs==2.4.1
 pluggy==1.0.0
 prometheus-client==0.12.0

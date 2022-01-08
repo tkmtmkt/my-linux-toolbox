@@ -55,4 +55,4 @@ bokeh = "*"                     # Interactive plots and applications in the brow
 bkcharts = "*"                  # High level chart types built on top of Bokeh
 
 [requires]
-python_version = "3.9"
+python_version = "3.10"
