@@ -3,12 +3,12 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=1_1_1l
+VERSION=1_1_1m
 TARGET=OpenSSL_${VERSION}
 
 # download
 ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tar.gz
-DOWNLOAD_URL=https://github.com/openssl/openssl/archive/${TARGET}.tar.gz
+DOWNLOAD_URL=https://github.com/openssl/openssl/archive/refs/tags/${TARGET}.tar.gz
 [[ ! -s ${ARCHIVE} ]] && curl -ksSL -o ${ARCHIVE} ${DOWNLOAD_URL}
 
 pushd ${BUILD_DIR}
