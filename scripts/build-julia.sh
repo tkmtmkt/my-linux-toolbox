@@ -4,7 +4,7 @@ SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
 VERSION=1.6
-TARGET=julia-${VERSION}.2
+TARGET=julia-${VERSION}.5
 
 # download
 case $(uname -m) in
