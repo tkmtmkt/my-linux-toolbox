@@ -15,15 +15,15 @@ testinfra = "*"                 # Test infrastructures
 pyOpenSSL = "*"                 # Python wrapper module around the OpenSSL library
 pytest-xdist = "*"              # pytest xdist plugin for distributed testing and loop-on-failing modes
 # sphinx
-Sphinx = "*"                    # Python documentation generator
-recommonmark = "*"              #
+#Sphinx = "*"                    # Python documentation generator
+#recommonmark = "*"              #
 #sphinxcontrib-blockdiag = "*"   # Sphinx "blockdiag" extension
 #sphinxcontrib-seqdiag = "*"     # Sphinx "seqdiag" extension
 #sphinxcontrib-actdiag = "*"     # Sphinx "actdiag" extension
 #sphinxcontrib-nwdiag = "*"      # Sphinx "nwdiag" extension
-sphinxcontrib-plantuml = "*"    # Sphinx "plantuml" extension
-sphinx-rtd-theme = "*"          # Read the Docs theme for Sphinx
-Flask-Sphinx-Themes = "*"       # Sphinx themes for Flask and related projects.
+#sphinxcontrib-plantuml = "*"    # Sphinx "plantuml" extension
+#sphinx-rtd-theme = "*"          # Read the Docs theme for Sphinx
+#Flask-Sphinx-Themes = "*"       # Sphinx themes for Flask and related projects.
 # util
 supervisor = "*"                # A system for controlling process state under UNIX
 pynvim = "*"                    # Python client to neovim
@@ -51,8 +51,8 @@ scipy = "*"                     # SciPy: Scientific Library for Python
 pandas = "*"                    # Powerful data structures for data analysis, time series, and statistics
 # plot
 matplotlib = "*"                # Python plotting package
-bokeh = "*"                     # Interactive plots and applications in the browser from Python
-bkcharts = "*"                  # High level chart types built on top of Bokeh
+#bokeh = "*"                     # Interactive plots and applications in the browser from Python
+#bkcharts = "*"                  # High level chart types built on top of Bokeh
 
 [requires]
 python_version = "3.10"
