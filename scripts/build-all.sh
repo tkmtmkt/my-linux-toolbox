@@ -106,6 +106,7 @@ bc
 taskwarrior
 neomutt
 fetchmail
+gnuplot
 
 ### python-packages
 python-packages
