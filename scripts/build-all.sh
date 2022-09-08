@@ -100,7 +100,6 @@ pwgen
 direnv
 rlwrap
 parallel
-multitail
 fossil
 ssh-chat
 bc
