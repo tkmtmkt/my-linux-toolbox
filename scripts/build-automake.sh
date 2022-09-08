@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=1.16.4
+VERSION=1.16.5
 TARGET=automake-${VERSION}
 
 # download
