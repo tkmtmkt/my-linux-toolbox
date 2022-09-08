@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=2.1.27
+VERSION=2.1.28
 TARGET=cyrus-sasl-${VERSION}
 
 # download
