@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=0.2.0
+VERSION=0.3.1
 TARGET=ntbtls-${VERSION}
 
 # download
