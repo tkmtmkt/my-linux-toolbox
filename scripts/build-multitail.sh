@@ -1,15 +1,15 @@
 #!/bin/bash
-# https://github.com/halturin/multitail
-# https://www.vanheusden.com/multitail/download.php
+# https://github.com/folkertvanheusden/multitail
+# https://www.vanheusden.com/multitail
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=6.5.0
+VERSION=7.0.0
 TARGET=multitail-${VERSION}
 
 # download
 ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tar.gz
-DOWNLOAD_URL=https://www.vanheusden.com/multitail/${TARGET}.tgz
+DOWNLOAD_URL=https://github.com/folkertvanheusden/multitail/archive/refs/tags/${VERSION}.tar.gz
 [[ ! -s ${ARCHIVE} ]] && curl -ksSL ${DOWNLOAD_URL} -o ${ARCHIVE}
 
 pushd ${BUILD_DIR}
