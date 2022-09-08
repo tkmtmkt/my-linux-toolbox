@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=5.4.3
+VERSION=5.4.4
 TARGET=lua-${VERSION}
 
 # download
