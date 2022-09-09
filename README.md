@@ -18,13 +18,15 @@
     │  ├─ubuntu/
     │  │  ├─opt/toolbox/
     │  │  └─Dockerfile
-    │  └─docker-compose.yml
+    │  ├─docker-compose.yml
+    │  ├─build.sh
+    │  ├─exec.sh
+    │  └─package.sh          ←ビルド結果のアーカイブを作成するスクリプト
     ├─log/                    ←ビルド結果のログ出力
     └─scripts/
         ├─build-all.sh        ←ビルドスクリプト（個別のビルドスクリプトを全て実行する）
         ├─build-common.sh     ←共通設定用のスクリプト（個別のビルドスクリプトから呼び出される）
-        ├─build-xxxx.sh       ←個別のビルドスクリプト
-        └─build-package.sh    ←ビルド結果のアーカイブを作成するスクリプト
+        └─build-xxxx.sh       ←個別のビルドスクリプト
 
 ```
 
@@ -73,7 +75,6 @@ $ ./build.sh ubuntu
 [curl](https://curl.haxx.se/)                       | ファイル転送ツール
 [tar](https://www.gnu.org/software/tar/)            | ファイルアーカイバ
 [p7zip](https://sourceforge.net/projects/p7zip/)    | ファイルアーカイバ
-[highway](https://github.com/tkengo/highway/)       | 高速grep
 [global](https://www.gnu.org/software/global/)      | ソースコードに索引付けを行うことで、大規模システムのハックやレビューを効率化するソフトウエア
 [nkf](https://ja.osdn.net/projects/nkf/)            | 異なる文字コード間の変換を行うソフトウェア
 [libxml2](http://xmlsoft.org/)                      | XMLデータの整形、抽出を行う（xmllintコマンド）
@@ -84,12 +85,8 @@ $ ./build.sh ubuntu
 [direnv](https://direnv.net/)                       | ディレクトリ毎に環境変数を定義して、そのディレクトリがカレントになった時だけ環境変数を有効/無効にするツール
 [rlwrap](https://github.com/hanslub42/rlwrap/)      | ヒストリ機能などがないコマンドに、readline 相当の機能を後付けする wrapper コマンド
 [parallel](https://www.gnu.org/software/parallel/)  | シェル上でコマンドを並列実行する
-[multitail](https://www.vanheusden.com/multitail/)  | 複数ファイルをtail表示する
 [taskwarrior](https://taskwarrior.org/)             | タスク管理ツール
-[neomutt](https://neomutt.org/)                     | メールクライアント
-[weechat](https://weechat.org/)                     | チャットクライアント
-[Chat over SSH](https://github.com/shazow/ssh-chat) | ssh接続で使用できるクライアント不要のチャットサーバ
-[fossil](https://www.fossil-scm.org/)               | チケット型プロジェクト管理ツール、兼バグトラッキングシステム、兼バージョン管理システム
+[gnuplot](http://www.gnuplot.info/)                 | グラフ描画ソフト
 
 ### 依存ライブラリ
 

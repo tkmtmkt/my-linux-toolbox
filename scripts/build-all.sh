@@ -100,12 +100,8 @@ pwgen
 direnv
 rlwrap
 parallel
-fossil
-ssh-chat
 bc
 taskwarrior
-neomutt
-fetchmail
 gnuplot
 
 ### python-packages
