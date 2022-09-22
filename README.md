@@ -18,13 +18,15 @@
     │  ├─ubuntu/
     │  │  ├─opt/toolbox/
     │  │  └─Dockerfile
-    │  └─docker-compose.yml
+    │  ├─docker-compose.yml
+    │  ├─build.sh
+    │  ├─exec.sh
+    │  └─package.sh          ←ビルド結果のアーカイブを作成するスクリプト
     ├─log/                    ←ビルド結果のログ出力
     └─scripts/
         ├─build-all.sh        ←ビルドスクリプト（個別のビルドスクリプトを全て実行する）
         ├─build-common.sh     ←共通設定用のスクリプト（個別のビルドスクリプトから呼び出される）
-        ├─build-xxxx.sh       ←個別のビルドスクリプト
-        └─build-package.sh    ←ビルド結果のアーカイブを作成するスクリプト
+        └─build-xxxx.sh       ←個別のビルドスクリプト
 
 ```
 
@@ -90,6 +92,7 @@ $ ./build.sh ubuntu
 [weechat](https://weechat.org/)                     | チャットクライアント
 [Chat over SSH](https://github.com/shazow/ssh-chat) | ssh接続で使用できるクライアント不要のチャットサーバ
 [fossil](https://www.fossil-scm.org/)               | チケット型プロジェクト管理ツール、兼バグトラッキングシステム、兼バージョン管理システム
+[gnuplot](http://www.gnuplot.info/)                 | グラフ描画ソフト
 
 ### 依存ライブラリ
 
