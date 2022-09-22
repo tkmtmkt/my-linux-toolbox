@@ -18,7 +18,8 @@ pushd ${BUILD_DIR}
 tar xf ${ARCHIVE}
 
 # build (download only)
-cp -rp ${TARGET}/* ${PREFIX}/
+mkdir -p ${PREFIX_BUILDTOOL}/
+cp -rp ${TARGET}/* ${PREFIX_BUILDTOOL}/
 RESULT=$?
 
 popd

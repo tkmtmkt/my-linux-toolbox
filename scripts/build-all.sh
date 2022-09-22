@@ -33,7 +33,6 @@ do
 done <<'EOS'
 ### base
 cmake
-bazel
 pkgconfig
 perl
 m4
@@ -76,10 +75,7 @@ git
 tig
 
 ### language
-julia
-lua
 python
-ruby
 
 ### vim
 vim
