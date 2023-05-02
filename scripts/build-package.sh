@@ -17,4 +17,5 @@ ARCHIVE=${ARCHIVES_DIR}/${TARGET}$1-$(TZ='Asia/Tokyo' date +%Y%m%d).tar.gz
 echo "package: ${ARCHIVE/${WORKSPACE_DIR}/..}"
 tar czf ${ARCHIVE} -C $(dirname ${TARGET_DIR}) \
     --exclude=${TARGET}/${WORKSPACE} \
+    --exclude=${TARGET}/buildtool \
     ${TARGET}
