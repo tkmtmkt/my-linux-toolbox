@@ -23,6 +23,7 @@ export CPPFLAGS="-P"
 ./configure --prefix=${PREFIX} \
             --with-pkg-config=${PREFIX}/bin/pkg-config \
             --with-pkg-config-libdir=${PREFIX}/lib/pkgconfig \
+            --with-termlib \
             --with-shared \
             --without-debug \
             --without-manpages \
@@ -31,7 +32,7 @@ export CPPFLAGS="-P"
             --enable-widec \
             --enable-ext-colors &&
 make && make install &&
-for lib in ncurses form panel menu
+for lib in ncurses form panel menu tinfo
 do
   ln -sf lib${lib}w.a    ${PREFIX}/lib/lib${lib}.a
   ln -sf lib${lib}w.so   ${PREFIX}/lib/lib${lib}.so

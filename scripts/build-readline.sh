@@ -21,7 +21,7 @@ cd ${TARGET}
 # build
 ./configure --prefix=${PREFIX} \
             --enable-multibyte &&
-make && make install
+make SHLIB_LIBS=-ltinfo && make install
 RESULT=$?
 
 popd
