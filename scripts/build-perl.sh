@@ -19,7 +19,7 @@ tar xf ${ARCHIVE}
 cd ${TARGET}
 
 # build
-./Configure -des -Dprefix=${PREFIX} &&
+./Configure -des -Dprefix=${PREFIX_BUILDTOOL} &&
 make && make install
 RESULT=$?
 

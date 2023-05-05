@@ -21,7 +21,7 @@ tar xf ${ARCHIVE}
 cd openssl-${TARGET}
 
 # build
-PERL=${PREFIX}/bin/perl
+PERL=${PREFIX_BUILDTOOL}/bin/perl
 ./config zlib \
          --prefix=${PREFIX} \
          --openssldir=${PREFIX}/ssl \
