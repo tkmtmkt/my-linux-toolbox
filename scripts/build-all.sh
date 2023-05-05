@@ -89,7 +89,7 @@ libevent
 tmux
 
 ### util
-p7zip
+7z
 pt
 ripgrep
 global
