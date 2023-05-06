@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=6.8
+VERSION=7.0.3
 TARGET=texinfo-${VERSION}
 
 # download
