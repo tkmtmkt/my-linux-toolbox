@@ -1,9 +1,9 @@
 #!/bin/bash
-# https://github.com/vim/vim/releases
+# https://github.com/vim/vim/tags
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=9.0.0246
+VERSION=9.0.1510
 TARGET=vim-${VERSION}
 
 # download
