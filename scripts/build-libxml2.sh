@@ -19,9 +19,6 @@ tar xf ${ARCHIVE}
 cd ${TARGET}
 
 # build
-if [[ -n $(which scl_source 2> /dev/null) ]]; then
-  source scl_source enable devtoolset-8
-fi
 ./configure --prefix=${PREFIX} \
             --with-history \
             --with-icu \

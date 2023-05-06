@@ -26,3 +26,7 @@ function log {
   [[ ! -d "${PREFIX}" ]] && mkdir ${PREFIX}
   echo "$(TZ='Asia/Tokyo' date -Iminutes) $1" >> ${PREFIX}/BUILDLOG
 }
+
+if [[ -n $(which scl_source 2> /dev/null) ]]; then
+  source scl_source enable devtoolset-8
+fi
