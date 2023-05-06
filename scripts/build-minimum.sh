@@ -43,23 +43,13 @@ cmake
 ### library
 zlib
 bzip
-xz
 ncurses
 libxml2
 gettext
 readline
-expat
 openssl
 sqlite3
-libffi
-rsync
-curl
-tar
 oniguruma
-
-### OpenLDAP
-cyrus-sasl
-openldap
 
 ### GnuPG
 libgpg-error
@@ -75,13 +65,7 @@ git
 tig
 
 ### language
-julia
-lua
-python
 ruby
-
-### vim
-vim
 
 ### tmux
 libevent
@@ -89,25 +73,15 @@ tmux
 
 ### util
 7z
-pt
 ripgrep
 global
 nkf
 jq
-fio
 pwgen
 direnv
 rlwrap
-parallel
 fossil
 ssh-chat
-bc
 taskwarrior
-neomutt
-fetchmail
 gnuplot
-bazel
-
-### python-packages
-python-packages
 EOS
