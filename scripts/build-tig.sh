@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=2.5.6
+VERSION=2.5.8
 TARGET=tig-${VERSION}
 
 # download
