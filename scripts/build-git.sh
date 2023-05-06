@@ -1,9 +1,9 @@
 #!/bin/bash
-# https://github.com/git/git/releases
+# https://github.com/git/git/tags
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=2.37.2
+VERSION=2.40.1
 TARGET=git-${VERSION}
 
 # download
