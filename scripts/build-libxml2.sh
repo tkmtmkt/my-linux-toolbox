@@ -1,15 +1,14 @@
 #!/bin/bash
-# http://xmlsoft.org/sources/?C=M;O=D
 # http://xmlsoft.org/downloads.html
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=2.9.12
-TARGET=libxml2-${VERSION}
+VERSION=2.10
+TARGET=libxml2-${VERSION}.4
 
 # download
-ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tar.gz
-DOWNLOAD_URL=http://xmlsoft.org/sources/${TARGET}.tar.gz
+ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tar.xz
+DOWNLOAD_URL=https://download.gnome.org/sources/libxml2/${VERSION}/${TARGET}.tar.xz
 [[ ! -s ${ARCHIVE} ]] && curl -ksSL ${DOWNLOAD_URL} -o ${ARCHIVE}
 
 pushd ${BUILD_DIR}
@@ -20,11 +19,13 @@ tar xf ${ARCHIVE}
 cd ${TARGET}
 
 # build
+if [[ -n $(which scl_source 2> /dev/null) ]]; then
+  source scl_source enable devtoolset-8
+fi
 ./configure --prefix=${PREFIX} \
             --with-history \
-            --without-python \
             --with-icu \
-            --with-threads &&
+            --without-python &&
 make && make install
 RESULT=$?
 
