@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=1.45
+VERSION=1.47
 TARGET=libgpg-error-${VERSION}
 
 # download
@@ -19,7 +19,8 @@ tar xf ${ARCHIVE}
 cd ${TARGET}
 
 # build
-./configure --prefix=${PREFIX} &&
+./configure --prefix=${PREFIX} \
+            --enable-install-gpg-error-config &&
 make && make install
 RESULT=$?
 
