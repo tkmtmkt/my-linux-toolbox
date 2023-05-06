@@ -3,9 +3,9 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=3.0.5
+VERSION=3.1.0
 TARGET=openssl-${VERSION}
-VERSION=1_1_1q
+VERSION=1_1_1t
 TARGET=OpenSSL_${VERSION}
 
 # download
