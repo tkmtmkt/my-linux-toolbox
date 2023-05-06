@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=0.21
+VERSION=0.21.1
 TARGET=gettext-${VERSION}
 
 # download
