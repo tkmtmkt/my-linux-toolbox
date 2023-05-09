@@ -50,6 +50,12 @@ $ cd docker
 $ ./build.sh centos
 $ ./build.sh ubuntu
 ```
+podmanを使用する場合のコマンド例
+
+```sh
+$ podman run -it --rm -h centos -v ..:/opt/toolbox centos_toolbox:7.7.1908 /bin/bash
+$ podman run -it --rm -h ubuntu -v ..:/opt/toolbox ubuntu_toolbox:18.04 /bin/bash
+```
 
 
 内容
