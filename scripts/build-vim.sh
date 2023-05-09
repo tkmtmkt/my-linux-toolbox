@@ -27,6 +27,7 @@ tar xf "${ARCHIVES_DIR}/${VIMDOC_JA}" &&
 cp -p vimdoc-ja-master/doc/* runtime/doc/ &&
 cp -p vimdoc-ja-master/syntax/* runtime/syntax/ &&
 
+export LDFLAGS="-L${PREFIX}/lib -L${PREFIX}/lib64 -Wl,-rpath,'${PREFIX}/lib:${PREFIX}/lib64'"
 ./configure --prefix=${PREFIX} \
             --with-features=huge \
             --enable-fail-if-missing \
