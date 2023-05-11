@@ -73,6 +73,11 @@ tmux
 
 ### util
 7z
+exa
+bat
+fd
+procs
+hexyl
 ripgrep
 global
 nkf

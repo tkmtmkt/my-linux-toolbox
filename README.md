@@ -78,6 +78,11 @@ $ podman run -it --rm -h ubuntu -v ..:/opt/toolbox ubuntu_toolbox:18.04 /bin/bas
 
  項目                                               | 説明
 ----------------------------------------------------|------
+[exa](https://github.com/ogham/exa)                 | lsの代替コマンド
+[bat](https://github.com/sharkdp/bat)               | catの代替コマンド
+[fd](https://github.com/sharkdp/fd)                 | findの代替コマンド
+[procs](https://github.com/dalance/procs)           | psの代替コマンド
+[hexyl](https://github.com/sharkdp/hexyl)           | odの代替コマンド
 [curl](https://curl.haxx.se/)                       | ファイル転送ツール
 [tar](https://www.gnu.org/software/tar/)            | ファイルアーカイバ
 [p7zip](https://sourceforge.net/projects/p7zip/)    | ファイルアーカイバ

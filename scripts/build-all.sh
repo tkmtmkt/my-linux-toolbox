@@ -89,8 +89,13 @@ tmux
 
 ### util
 7z
-pt
+exa
+bat
+fd
+procs
+hexyl
 ripgrep
+pt
 global
 nkf
 jq
