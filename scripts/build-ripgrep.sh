@@ -24,8 +24,11 @@ pushd ${BUILD_DIR}
 tar xf ${ARCHIVE}
 
 # build (download only)
-cp -p ${TARGET}/rg ${PREFIX}/bin/rg &&
-chmod a+x ${PREFIX}/bin/rg
+mkdir -p ${PREFIX}/{bin,completion} &&
+mkdir -p ${PREFIX}/man/man1 &&
+cp -p ${TARGET}/rg         ${PREFIX}/bin/ &&
+cp -p ${TARGET}/doc/rg.1   ${PREFIX}/man/man1/ &&
+cp -p ${TARGET}/complete/* ${PREFIX}/completion/
 RESULT=$?
 
 popd
