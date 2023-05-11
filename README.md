@@ -78,15 +78,15 @@ $ podman run -it --rm -h ubuntu -v ..:/opt/toolbox ubuntu_toolbox:18.04 /bin/bas
 
  項目                                               | 説明
 ----------------------------------------------------|------
+[7-Zip](https://sevenzip.osdn.jp/)                  | ファイルアーカイバ
 [exa](https://github.com/ogham/exa)                 | lsの代替コマンド
 [bat](https://github.com/sharkdp/bat)               | catの代替コマンド
 [fd](https://github.com/sharkdp/fd)                 | findの代替コマンド
 [procs](https://github.com/dalance/procs)           | psの代替コマンド
 [hexyl](https://github.com/sharkdp/hexyl)           | odの代替コマンド
+[ripgrep](https://github.com/BurntSushi/ripgrep)    | grepの代替コマンド
 [curl](https://curl.haxx.se/)                       | ファイル転送ツール
 [tar](https://www.gnu.org/software/tar/)            | ファイルアーカイバ
-[p7zip](https://sourceforge.net/projects/p7zip/)    | ファイルアーカイバ
-[highway](https://github.com/tkengo/highway/)       | 高速grep
 [global](https://www.gnu.org/software/global/)      | ソースコードに索引付けを行うことで、大規模システムのハックやレビューを効率化するソフトウエア
 [nkf](https://ja.osdn.net/projects/nkf/)            | 異なる文字コード間の変換を行うソフトウェア
 [libxml2](http://xmlsoft.org/)                      | XMLデータの整形、抽出を行う（xmllintコマンド）
