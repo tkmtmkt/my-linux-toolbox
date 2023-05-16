@@ -67,6 +67,9 @@ tig
 ### language
 ruby
 
+### vim
+vim
+
 ### tmux
 libevent
 tmux
